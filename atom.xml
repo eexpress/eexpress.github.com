@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://eexpress.github.io/"/>
-  <updated>2019-04-01T16:15:14.957Z</updated>
+  <updated>2019-04-02T10:50:16.832Z</updated>
   <id>http://eexpress.github.io/</id>
   
   <author>
@@ -17,13 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>本地化vala手册</title>
+    <link href="http://eexpress.github.io/2019/04/02/%E6%9C%AC%E5%9C%B0%E5%8C%96vala%E6%89%8B%E5%86%8C/"/>
+    <id>http://eexpress.github.io/2019/04/02/本地化vala手册/</id>
+    <published>2019-04-02T10:46:02.000Z</published>
+    <updated>2019-04-02T10:50:16.832Z</updated>
+    
+    <content type="html"><![CDATA[<p>一直上valadoc.org看，网速不对头，感觉偶尔被封。在哪里找到一个列表，类似这样的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">http://www.valadoc.org/gtk+-2.0/gtk+-2.0.tar.bz2</span><br><span class="line">http://www.valadoc.org/gtk+-3.0/gtk+-3.0.tar.bz2</span><br><span class="line">http://www.valadoc.org/gtk-vnc-2.0/gtk-vnc-2.0.tar.bz2</span><br><span class="line">http://www.valadoc.org/gtkmozembed/gtkmozembed.tar.bz2</span><br><span class="line">http://www.valadoc.org/gtksourceview-2.0/gtksourceview-2.0.tar.bz2</span><br><span class="line">http://www.valadoc.org/gtksourceview-3.0/gtksourceview-3.0.tar.bz2</span><br><span class="line">http://www.valadoc.org/gudev-1.0/gudev-1.0.tar.bz2</span><br></pre></td></tr></table></figure></p><p>下载解压<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">▶ for i in `cat valadoc.list`; do wget $i &amp;&amp; tar -xf `basename $i` -C ~/.local/share/devhelp/books/; done</span><br></pre></td></tr></table></figure></p><p>在devhelp里面选择只显示vala语言。这下方便多了。devhelp其实蛮好用的。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;一直上valadoc.org看，网速不对头，感觉偶尔被封。在哪里找到一个列表，类似这样的。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="vala" scheme="http://eexpress.github.io/tags/vala/"/>
+    
+      <category term="devhelp" scheme="http://eexpress.github.io/tags/devhelp/"/>
+    
+  </entry>
+  
+  <entry>
     <title>vim动态执行编译</title>
     <link href="http://eexpress.github.io/2019/04/02/vim%E5%8A%A8%E6%80%81%E6%89%A7%E8%A1%8C%E7%BC%96%E8%AF%91/"/>
     <id>http://eexpress.github.io/2019/04/02/vim动态执行编译/</id>
     <published>2019-04-01T16:08:34.000Z</published>
-    <updated>2019-04-01T16:15:14.957Z</updated>
+    <updated>2019-04-02T10:31:03.742Z</updated>
     
-    <content type="html"><![CDATA[<p>最近突然编译需求来了。每一个文件的依赖库都不同，以前vim的编译函数都是扯谈了。干脆写了一个通用的方法的函数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&quot;============ &lt;F5&gt; 运行前五行注释中的命令 =========</span><br><span class="line">map &lt;F5&gt; :call RunComment()&lt;CR&gt;</span><br><span class="line">func RunComment()</span><br><span class="line">let n = 1</span><br><span class="line">while n &lt; 5</span><br><span class="line">let l=getline(n)</span><br><span class="line">if l =~ &apos;//!&apos;</span><br><span class="line">echo strpart(l, stridx(l, &quot;!&quot;))</span><br><span class="line">exec strpart(l, stridx(l, &quot;!&quot;))</span><br><span class="line">endif</span><br><span class="line">let n = n + 1</span><br><span class="line">endwhile</span><br><span class="line">endfunc</span><br></pre></td></tr></table></figure></p><p>源码里面类似这样的，直接写编译命令。反正只认包含”//!”的行。第二句没运行，还要看看为啥。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">▶ head -n 5 ~/bin/showit/showsvgpngtxt.vala </span><br><span class="line">//▶ valac --pkg gtk+-3.0 --pkg librsvg-2.0 showsvgpngtxt.vala</span><br><span class="line">//!valac --pkg gtk+-3.0 --pkg librsvg-2.0 %</span><br><span class="line">//!./%&lt;</span><br><span class="line">using Gtk;</span><br><span class="line">using Cairo;</span><br></pre></td></tr></table></figure></p>]]></content>
+    <content type="html"><![CDATA[<p>最近突然编译需求来了。每一个文件的依赖库都不同，以前vim的编译函数都是扯谈了。干脆写了一个通用的方法的函数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&quot;============ &lt;F5&gt; 运行前五行注释中的命令 =========</span><br><span class="line">map &lt;F5&gt; :call RunComment()&lt;CR&gt;</span><br><span class="line">func RunComment()</span><br><span class="line">let n = 1</span><br><span class="line">while n &lt; 5</span><br><span class="line">let l=getline(n)</span><br><span class="line">if l =~ &apos;//!&apos;</span><br><span class="line">echo strpart(l, stridx(l, &quot;!&quot;))</span><br><span class="line">exec strpart(l, stridx(l, &quot;!&quot;))</span><br><span class="line">endif</span><br><span class="line">let n = n + 1</span><br><span class="line">endwhile</span><br><span class="line">endfunc</span><br></pre></td></tr></table></figure></p><p>源码里面类似这样的，直接写编译命令。反正只认包含”//!”的行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">▶ head -n 5 ~/bin/showit/showsvgpngtxt.vala </span><br><span class="line">//▶ valac --pkg gtk+-3.0 --pkg librsvg-2.0 showsvgpngtxt.vala</span><br><span class="line">//!valac --pkg gtk+-3.0 --pkg librsvg-2.0 %</span><br><span class="line">//!./%&lt;</span><br><span class="line">using Gtk;</span><br><span class="line">using Cairo;</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
@@ -5267,31 +5292,6 @@ Filesystem created:       Mon Jun  3
   </entry>
   
   <entry>
-    <title>自动生成流程图 flow</title>
-    <link href="http://eexpress.github.io/2013/06/01/s.%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E6%B5%81%E7%A8%8B%E5%9B%BE-flow/"/>
-    <id>http://eexpress.github.io/2013/06/01/s.自动生成流程图-flow/</id>
-    <published>2013-05-31T16:00:00.000Z</published>
-    <updated>2019-02-13T08:17:08.904Z</updated>
-    
-    <content type="html"><![CDATA[<p>在c或者其他不冲突的代码里面写上 “/// xxxx” 的注释。自动生成流程图。依赖graphviz。<br>下载 flow.pl<br><a href="https://github.com/eexpress/eexp-bin/blob/master/flow.pl" target="_blank" rel="noopener">flow.pl</a><br><img src="/pic/flow.pl.png" alt></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;在c或者其他不冲突的代码里面写上 “/// xxxx” 的注释。自动生成流程图。依赖graphviz。&lt;br&gt;下载 flow.pl&lt;br&gt;&lt;a href=&quot;https://github.com/eexpress/eexp-bin/blob/master/flow.pl&quot; t
-      
-    
-    </summary>
-    
-      <category term="软件" scheme="http://eexpress.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-      <category term="flow" scheme="http://eexpress.github.io/tags/flow/"/>
-    
-  </entry>
-  
-  <entry>
     <title>红外遥控定时器</title>
     <link href="http://eexpress.github.io/2013/06/01/s.%E7%BA%A2%E5%A4%96%E9%81%A5%E6%8E%A7%E5%AE%9A%E6%97%B6%E5%99%A8/"/>
     <id>http://eexpress.github.io/2013/06/01/s.红外遥控定时器/</id>
@@ -5314,6 +5314,31 @@ Filesystem created:       Mon Jun  3
     
     
       <category term="IrDA" scheme="http://eexpress.github.io/tags/IrDA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自动生成流程图 flow</title>
+    <link href="http://eexpress.github.io/2013/06/01/s.%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E6%B5%81%E7%A8%8B%E5%9B%BE-flow/"/>
+    <id>http://eexpress.github.io/2013/06/01/s.自动生成流程图-flow/</id>
+    <published>2013-05-31T16:00:00.000Z</published>
+    <updated>2019-02-13T08:17:08.904Z</updated>
+    
+    <content type="html"><![CDATA[<p>在c或者其他不冲突的代码里面写上 “/// xxxx” 的注释。自动生成流程图。依赖graphviz。<br>下载 flow.pl<br><a href="https://github.com/eexpress/eexp-bin/blob/master/flow.pl" target="_blank" rel="noopener">flow.pl</a><br><img src="/pic/flow.pl.png" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在c或者其他不冲突的代码里面写上 “/// xxxx” 的注释。自动生成流程图。依赖graphviz。&lt;br&gt;下载 flow.pl&lt;br&gt;&lt;a href=&quot;https://github.com/eexpress/eexp-bin/blob/master/flow.pl&quot; t
+      
+    
+    </summary>
+    
+      <category term="软件" scheme="http://eexpress.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+      <category term="flow" scheme="http://eexpress.github.io/tags/flow/"/>
     
   </entry>
   
@@ -7027,6 +7052,31 @@ Filesystem created:       Mon Jun  3
   </entry>
   
   <entry>
+    <title>traynote</title>
+    <link href="http://eexpress.github.io/2010/01/01/s.traynote/"/>
+    <id>http://eexpress.github.io/2010/01/01/s.traynote/</id>
+    <published>2009-12-31T16:00:00.000Z</published>
+    <updated>2019-02-13T08:17:08.904Z</updated>
+    
+    <content type="html"><![CDATA[<p>移植status note。<br>deb包，包含了几十个图标。增加了中文包。居然就是不能从中文产生英文包。<br>下载 traynote.vala<br><a href="/deb/traynote_0.63_amd64.deb">traynote_0.63_amd64.deb</a><br><img src="/pic/traynote.png" alt><br><img src="/pic/traynote-edit.png" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;移植status note。&lt;br&gt;deb包，包含了几十个图标。增加了中文包。居然就是不能从中文产生英文包。&lt;br&gt;下载 traynote.vala&lt;br&gt;&lt;a href=&quot;/deb/traynote_0.63_amd64.deb&quot;&gt;traynote_0.63_amd64.
+      
+    
+    </summary>
+    
+      <category term="软件" scheme="http://eexpress.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+      <category term="traynote" scheme="http://eexpress.github.io/tags/traynote/"/>
+    
+  </entry>
+  
+  <entry>
     <title>fvwm最简洁配置</title>
     <link href="http://eexpress.github.io/2010/01/01/s.fvwm%E6%9C%80%E7%AE%80%E6%B4%81%E9%85%8D%E7%BD%AE/"/>
     <id>http://eexpress.github.io/2010/01/01/s.fvwm最简洁配置/</id>
@@ -7049,31 +7099,6 @@ Filesystem created:       Mon Jun  3
     
     
       <category term="fvwm" scheme="http://eexpress.github.io/tags/fvwm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>traynote</title>
-    <link href="http://eexpress.github.io/2010/01/01/s.traynote/"/>
-    <id>http://eexpress.github.io/2010/01/01/s.traynote/</id>
-    <published>2009-12-31T16:00:00.000Z</published>
-    <updated>2019-02-13T08:17:08.904Z</updated>
-    
-    <content type="html"><![CDATA[<p>移植status note。<br>deb包，包含了几十个图标。增加了中文包。居然就是不能从中文产生英文包。<br>下载 traynote.vala<br><a href="/deb/traynote_0.63_amd64.deb">traynote_0.63_amd64.deb</a><br><img src="/pic/traynote.png" alt><br><img src="/pic/traynote-edit.png" alt></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;移植status note。&lt;br&gt;deb包，包含了几十个图标。增加了中文包。居然就是不能从中文产生英文包。&lt;br&gt;下载 traynote.vala&lt;br&gt;&lt;a href=&quot;/deb/traynote_0.63_amd64.deb&quot;&gt;traynote_0.63_amd64.
-      
-    
-    </summary>
-    
-      <category term="软件" scheme="http://eexpress.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-      <category term="traynote" scheme="http://eexpress.github.io/tags/traynote/"/>
     
   </entry>
   

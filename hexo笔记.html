@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://eexpress.github.io">
   <title>eexpss blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#hexo Fedora 29 恢复 hexo安装必要环境1234567# dnf install libuv&amp;gt; 让root自动安装所需软件# npm# npm i hexo-cli -g# npm i hexo-generator-feed 添加RSS订阅功能# npm i hexo-generator-json-content 添加文章搜索 新建hexo目录123456789101112">
+  <meta name="description" content="#hexo Fedora 29 恢复 hexo安装必要环境1234# dnf install libuv&amp;gt; 让root自动安装所需软件# npm# npm i hexo-cli -g 新建hexo目录123456789101112131415161718▶ mkdir hexo; cd hexo▶ hexo init▶ rm -r source/▶ ln -sf ~/bin/blog.hex">
 <meta property="og:type" content="website">
 <meta property="og:title" content="eexpss blog">
 <meta property="og:url" content="http://eexpress.github.io/hexo笔记.html">
 <meta property="og:site_name" content="eexpss blog">
-<meta property="og:description" content="#hexo Fedora 29 恢复 hexo安装必要环境1234567# dnf install libuv&amp;gt; 让root自动安装所需软件# npm# npm i hexo-cli -g# npm i hexo-generator-feed 添加RSS订阅功能# npm i hexo-generator-json-content 添加文章搜索 新建hexo目录123456789101112">
+<meta property="og:description" content="#hexo Fedora 29 恢复 hexo安装必要环境1234# dnf install libuv&amp;gt; 让root自动安装所需软件# npm# npm i hexo-cli -g 新建hexo目录123456789101112131415161718▶ mkdir hexo; cd hexo▶ hexo init▶ rm -r source/▶ ln -sf ~/bin/blog.hex">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-01T17:24:38.336Z">
+<meta property="og:updated_time" content="2019-04-01T17:33:43.144Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="eexpss blog">
-<meta name="twitter:description" content="#hexo Fedora 29 恢复 hexo安装必要环境1234567# dnf install libuv&amp;gt; 让root自动安装所需软件# npm# npm i hexo-cli -g# npm i hexo-generator-feed 添加RSS订阅功能# npm i hexo-generator-json-content 添加文章搜索 新建hexo目录123456789101112">
+<meta name="twitter:description" content="#hexo Fedora 29 恢复 hexo安装必要环境1234# dnf install libuv&amp;gt; 让root自动安装所需软件# npm# npm i hexo-cli -g 新建hexo目录123456789101112131415161718▶ mkdir hexo; cd hexo▶ hexo init▶ rm -r source/▶ ln -sf ~/bin/blog.hex">
   
     <link rel="alternative" href="/atom.xml" title="eexpss blog" type="application/atom+xml">
   
@@ -140,9 +140,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>#hexo</p>
-<h2 id="Fedora-29-恢复-hexo"><a href="#Fedora-29-恢复-hexo" class="headerlink" title="Fedora 29 恢复 hexo"></a>Fedora 29 恢复 hexo</h2><h2 id="安装必要环境"><a href="#安装必要环境" class="headerlink" title="安装必要环境"></a>安装必要环境</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># dnf install libuv</span><br><span class="line">&gt; 让root自动安装所需软件</span><br><span class="line"># npm</span><br><span class="line"># npm i hexo-cli -g</span><br><span class="line"># npm i hexo-generator-feed 添加RSS订阅功能</span><br><span class="line"></span><br><span class="line"># npm i hexo-generator-json-content 添加文章搜索</span><br></pre></td></tr></table></figure>
-<h2 id="新建hexo目录"><a href="#新建hexo目录" class="headerlink" title="新建hexo目录"></a>新建hexo目录</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">▶ mkdir hexo; cd hexo</span><br><span class="line">▶ hexo init</span><br><span class="line">▶ rm -r source/</span><br><span class="line">▶ ln -sf ~/bin/blog.hexo-source/ source</span><br><span class="line">▶ cp source/hexo._config.yml _config.yml</span><br><span class="line">▶ git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br><span class="line">▶ cp source/yilia._config.yml themes/yilia/_config.yml </span><br><span class="line">▶ hexo s</span><br><span class="line">▶ hexo d -g</span><br><span class="line">&gt; ERROR Deployer not found: git</span><br><span class="line">▶ npm i hexo-deployer-git --save</span><br><span class="line">&gt; 添加RSS订阅功能</span><br><span class="line">▶ npm i hexo-generator-feed --save</span><br><span class="line">&gt; 添加文章搜索</span><br><span class="line">▶ npm i hexo-generator-json-content --save</span><br></pre></td></tr></table></figure>
-<h2 id="…"><a href="#…" class="headerlink" title="…"></a>…</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 添加文章搜索</span></span><br><span class="line">▶ sudo npm i hexo-generator-json-content --save</span><br><span class="line"><span class="comment"># 在/_config.yml加入如下内容</span></span><br><span class="line">jsonContent:</span><br><span class="line">    meta: <span class="literal">false</span></span><br><span class="line">    pages: <span class="literal">false</span></span><br><span class="line">    posts:</span><br><span class="line">      title: <span class="literal">true</span></span><br><span class="line">      date: <span class="literal">true</span></span><br><span class="line">      path: <span class="literal">true</span></span><br><span class="line">      text: <span class="literal">false</span></span><br><span class="line">      raw: <span class="literal">false</span></span><br><span class="line">      content: <span class="literal">false</span></span><br><span class="line">      slug: <span class="literal">false</span></span><br><span class="line">      updated: <span class="literal">false</span></span><br><span class="line">      comments: <span class="literal">false</span></span><br><span class="line">      link: <span class="literal">false</span></span><br><span class="line">      permalink: <span class="literal">false</span></span><br><span class="line">      excerpt: <span class="literal">false</span></span><br><span class="line">      categories: <span class="literal">false</span></span><br><span class="line">      tags: <span class="literal">true</span></span><br><span class="line"><span class="comment"># 自定义css又无效了，文件都改动了。</span></span><br><span class="line">▶ <span class="built_in">cd</span> themes/yilia/<span class="built_in">source</span>-src/css</span><br><span class="line">▶ ln ~/bin/mkd/mkd.css .</span><br><span class="line">▶ cp main.scss&#123;,.org&#125;</span><br><span class="line">▶ <span class="built_in">echo</span> -e <span class="string">'\n\n@import "mkd.css";'</span>&gt;&gt;main.scss</span><br><span class="line"></span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h2 id="Fedora-29-恢复-hexo"><a href="#Fedora-29-恢复-hexo" class="headerlink" title="Fedora 29 恢复 hexo"></a>Fedora 29 恢复 hexo</h2><h2 id="安装必要环境"><a href="#安装必要环境" class="headerlink" title="安装必要环境"></a>安装必要环境</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># dnf install libuv</span><br><span class="line">&gt; 让root自动安装所需软件</span><br><span class="line"># npm</span><br><span class="line"># npm i hexo-cli -g</span><br></pre></td></tr></table></figure>
+<h2 id="新建hexo目录"><a href="#新建hexo目录" class="headerlink" title="新建hexo目录"></a>新建hexo目录</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">▶ mkdir hexo; cd hexo</span><br><span class="line">▶ hexo init</span><br><span class="line">▶ rm -r source/</span><br><span class="line">▶ ln -sf ~/bin/blog.hexo-source/ source</span><br><span class="line">▶ cp source/hexo._config.yml _config.yml</span><br><span class="line">▶ git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br><span class="line">▶ cp source/yilia._config.yml themes/yilia/_config.yml </span><br><span class="line">▶ hexo s</span><br><span class="line">▶ hexo d -g</span><br><span class="line">&gt; ERROR Deployer not found: git</span><br><span class="line">▶ npm i hexo-deployer-git --save</span><br><span class="line">&gt; 添加RSS订阅功能</span><br><span class="line">&gt; INFO  Generated: atom.xml</span><br><span class="line">▶ npm i hexo-generator-feed --save</span><br><span class="line">&gt; 添加文章搜索</span><br><span class="line">&gt; INFO  Generated: content.json</span><br><span class="line">▶ npm i hexo-generator-json-content --save</span><br><span class="line">▶ hexo d -g</span><br></pre></td></tr></table></figure>
+<h2 id="…old…-展示不操作"><a href="#…old…-展示不操作" class="headerlink" title="…old… 展示不操作"></a>…old… 展示不操作</h2><h2 id="在-config-yml加入如下内容"><a href="#在-config-yml加入如下内容" class="headerlink" title="在/_config.yml加入如下内容"></a>在/_config.yml加入如下内容</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">jsonContent:</span><br><span class="line">    meta: false</span><br><span class="line">    pages: false</span><br><span class="line">    posts:</span><br><span class="line">      title: true</span><br><span class="line">      date: true</span><br><span class="line">      path: true</span><br><span class="line">      text: false</span><br><span class="line">      raw: false</span><br><span class="line">      content: false</span><br><span class="line">      slug: false</span><br><span class="line">      updated: false</span><br><span class="line">      comments: false</span><br><span class="line">      link: false</span><br><span class="line">      permalink: false</span><br><span class="line">      excerpt: false</span><br><span class="line">      categories: false</span><br><span class="line">      tags: true</span><br></pre></td></tr></table></figure>
+<h2 id="自定义css又无效了，文件都改动了。"><a href="#自定义css又无效了，文件都改动了。" class="headerlink" title="自定义css又无效了，文件都改动了。"></a>自定义css又无效了，文件都改动了。</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">▶ cd themes/yilia/source-src/css</span><br><span class="line">▶ ln ~/bin/mkd/mkd.css .</span><br><span class="line">▶ cp main.scss&#123;,.org&#125;</span><br><span class="line">▶ echo -e &apos;\n\n@import &quot;mkd.css&quot;;&apos;&gt;&gt;main.scss</span><br></pre></td></tr></table></figure>
       
 
       
@@ -357,18 +358,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">3d</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">stl</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">openscad</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">gconftool</a>
               </li>
              
@@ -389,11 +378,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">game</a>
+                <a href="javascript:void(0)" class="js-tag color3">3d</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">i686</a>
+                <a href="javascript:void(0)" class="js-tag color4">stl</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">openscad</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -410,6 +403,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">IrDA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">game</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">i686</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -441,6 +442,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">movie</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">compile</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">minidlna</a>
               </li>
              
@@ -454,14 +463,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">DAAP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">movie</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">compile</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -501,15 +502,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Ingress</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">holoirc</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">irc</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Ingress</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -585,11 +586,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">screenrecord</a>
+                <a href="javascript:void(0)" class="js-tag color3">android</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">android</a>
+                <a href="javascript:void(0)" class="js-tag color3">screenrecord</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -633,11 +634,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ffmpeg</a>
+                <a href="javascript:void(0)" class="js-tag color5">bash</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">bash</a>
+                <a href="javascript:void(0)" class="js-tag color2">ffmpeg</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -713,15 +714,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">pattern</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">upgrade</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">ipad</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">pattern</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -969,10 +970,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">mimetype</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">分区</a>
               </li>
              
@@ -982,6 +979,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">palimpsest</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">mimetype</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1097,10 +1098,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">fedora</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">bind9</a>
               </li>
              
@@ -1110,6 +1107,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vps</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">fedora</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1133,18 +1134,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">reboot</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">last</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">开关机</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">shadowsocks</a>
               </li>
              
@@ -1161,7 +1150,39 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">reboot</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">last</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">开关机</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">花</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">emblem</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">gnome2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">CC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">gpg</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">openkeychain</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1193,26 +1214,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">gpg</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">openkeychain</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">emblem</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">gnome2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">imagemagick</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">lvm</a>
               </li>
              
@@ -1222,6 +1223,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">locate</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">imagemagick</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1238,6 +1243,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">catull</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">devhelp</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1425,10 +1434,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">privoxy</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">web</a>
               </li>
              
@@ -1449,6 +1454,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">privoxy</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">cursor</a>
               </li>
              
@@ -1466,10 +1475,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">laptop</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CC</a>
               </li>
             
             <div class="clearfix"></div>
