@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://eexpress.github.io/"/>
-  <updated>2019-04-02T10:50:16.832Z</updated>
+  <updated>2019-04-04T14:52:12.952Z</updated>
   <id>http://eexpress.github.io/</id>
   
   <author>
@@ -21,15 +21,16 @@
     <link href="http://eexpress.github.io/2019/04/02/%E6%9C%AC%E5%9C%B0%E5%8C%96vala%E6%89%8B%E5%86%8C/"/>
     <id>http://eexpress.github.io/2019/04/02/本地化vala手册/</id>
     <published>2019-04-02T10:46:02.000Z</published>
-    <updated>2019-04-02T10:50:16.832Z</updated>
+    <updated>2019-04-04T14:52:12.952Z</updated>
     
-    <content type="html"><![CDATA[<p>一直上valadoc.org看，网速不对头，感觉偶尔被封。在哪里找到一个列表，类似这样的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">http://www.valadoc.org/gtk+-2.0/gtk+-2.0.tar.bz2</span><br><span class="line">http://www.valadoc.org/gtk+-3.0/gtk+-3.0.tar.bz2</span><br><span class="line">http://www.valadoc.org/gtk-vnc-2.0/gtk-vnc-2.0.tar.bz2</span><br><span class="line">http://www.valadoc.org/gtkmozembed/gtkmozembed.tar.bz2</span><br><span class="line">http://www.valadoc.org/gtksourceview-2.0/gtksourceview-2.0.tar.bz2</span><br><span class="line">http://www.valadoc.org/gtksourceview-3.0/gtksourceview-3.0.tar.bz2</span><br><span class="line">http://www.valadoc.org/gudev-1.0/gudev-1.0.tar.bz2</span><br></pre></td></tr></table></figure></p><p>下载解压<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">▶ for i in `cat valadoc.list`; do wget $i &amp;&amp; tar -xf `basename $i` -C ~/.local/share/devhelp/books/; done</span><br></pre></td></tr></table></figure></p><p>在devhelp里面选择只显示vala语言。这下方便多了。devhelp其实蛮好用的。</p>]]></content>
+    <content type="html"><![CDATA[<p>一直上valadoc.org看，网速不对头，感觉偶尔被封。</p><p>先这样爬一下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">▶ curl https://valadoc.org | grep devhelp | cut -c33- | sed &apos;s/&quot;&gt;.*$//&apos;</span><br></pre></td></tr></table></figure></p><p>得到一个列表，类似这样的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/xcb-randr/xcb-randr.tar.bz2</span><br><span class="line">/xcb-render/xcb-render.tar.bz2</span><br><span class="line">/xcb-res/xcb-res.tar.bz2</span><br><span class="line">/xcb-shape/xcb-shape.tar.bz2</span><br><span class="line">/xcb-shm/xcb-shm.tar.bz2</span><br><span class="line">/xcb-sync/xcb-sync.tar.bz2</span><br><span class="line">/xcb-xfixes/xcb-xfixes.tar.bz2</span><br></pre></td></tr></table></figure></p><p>附加上网址。丢一个文件里面去。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">http://www.valadoc.org/gtk+-2.0/gtk+-2.0.tar.bz2</span><br><span class="line">http://www.valadoc.org/gtk+-3.0/gtk+-3.0.tar.bz2</span><br><span class="line">http://www.valadoc.org/gtk-vnc-2.0/gtk-vnc-2.0.tar.bz2</span><br><span class="line">http://www.valadoc.org/gtkmozembed/gtkmozembed.tar.bz2</span><br><span class="line">http://www.valadoc.org/gtksourceview-2.0/gtksourceview-2.0.tar.bz2</span><br><span class="line">http://www.valadoc.org/gtksourceview-3.0/gtksourceview-3.0.tar.bz2</span><br><span class="line">http://www.valadoc.org/gudev-1.0/gudev-1.0.tar.bz2</span><br></pre></td></tr></table></figure></p><p>下载解压。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">▶ for i in `cat valadoc.list`; do wget $i &amp;&amp; tar -xf `basename $i` -C ~/.local/share/devhelp/books/; done</span><br></pre></td></tr></table></figure></p><p>在devhelp里面选择只显示vala语言。这下方便多了。devhelp其实蛮好用的。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;一直上valadoc.org看，网速不对头，感觉偶尔被封。在哪里找到一个列表，类似这样的。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;
+        &lt;p&gt;一直上valadoc.org看，网速不对头，感觉偶尔被封。&lt;/p&gt;
+&lt;p&gt;先这样爬一下。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/
       
     
     </summary>

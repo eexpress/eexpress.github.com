@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://eexpress.github.io">
   <title>本地化vala手册 | eexpss blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一直上valadoc.org看，网速不对头，感觉偶尔被封。在哪里找到一个列表，类似这样的。1234567http://www.valadoc.org/gtk+-2.0/gtk+-2.0.tar.bz2http://www.valadoc.org/gtk+-3.0/gtk+-3.0.tar.bz2http://www.valadoc.org/gtk-vnc-2.0/gtk-vnc-2.0.tar.b">
+  <meta name="description" content="一直上valadoc.org看，网速不对头，感觉偶尔被封。 先这样爬一下。1▶ curl https://valadoc.org | grep devhelp | cut -c33- | sed &amp;apos;s/&amp;quot;&amp;gt;.*$//&amp;apos; 得到一个列表，类似这样的。1234567/xcb-randr/xcb-randr.tar.bz2/xcb-render/xcb-render.t">
 <meta name="keywords" content="vala,devhelp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="本地化vala手册">
 <meta property="og:url" content="http://eexpress.github.io/2019/04/02/本地化vala手册/index.html">
 <meta property="og:site_name" content="eexpss blog">
-<meta property="og:description" content="一直上valadoc.org看，网速不对头，感觉偶尔被封。在哪里找到一个列表，类似这样的。1234567http://www.valadoc.org/gtk+-2.0/gtk+-2.0.tar.bz2http://www.valadoc.org/gtk+-3.0/gtk+-3.0.tar.bz2http://www.valadoc.org/gtk-vnc-2.0/gtk-vnc-2.0.tar.b">
+<meta property="og:description" content="一直上valadoc.org看，网速不对头，感觉偶尔被封。 先这样爬一下。1▶ curl https://valadoc.org | grep devhelp | cut -c33- | sed &amp;apos;s/&amp;quot;&amp;gt;.*$//&amp;apos; 得到一个列表，类似这样的。1234567/xcb-randr/xcb-randr.tar.bz2/xcb-render/xcb-render.t">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-02T10:50:16.832Z">
+<meta property="og:updated_time" content="2019-04-04T14:52:12.952Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="本地化vala手册">
-<meta name="twitter:description" content="一直上valadoc.org看，网速不对头，感觉偶尔被封。在哪里找到一个列表，类似这样的。1234567http://www.valadoc.org/gtk+-2.0/gtk+-2.0.tar.bz2http://www.valadoc.org/gtk+-3.0/gtk+-3.0.tar.bz2http://www.valadoc.org/gtk-vnc-2.0/gtk-vnc-2.0.tar.b">
+<meta name="twitter:description" content="一直上valadoc.org看，网速不对头，感觉偶尔被封。 先这样爬一下。1▶ curl https://valadoc.org | grep devhelp | cut -c33- | sed &amp;apos;s/&amp;quot;&amp;gt;.*$//&amp;apos; 得到一个列表，类似这样的。1234567/xcb-randr/xcb-randr.tar.bz2/xcb-render/xcb-render.t">
   
     <link rel="alternative" href="/atom.xml" title="eexpss blog" type="application/atom+xml">
   
@@ -155,8 +155,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一直上valadoc.org看，网速不对头，感觉偶尔被封。在哪里找到一个列表，类似这样的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">http://www.valadoc.org/gtk+-2.0/gtk+-2.0.tar.bz2</span><br><span class="line">http://www.valadoc.org/gtk+-3.0/gtk+-3.0.tar.bz2</span><br><span class="line">http://www.valadoc.org/gtk-vnc-2.0/gtk-vnc-2.0.tar.bz2</span><br><span class="line">http://www.valadoc.org/gtkmozembed/gtkmozembed.tar.bz2</span><br><span class="line">http://www.valadoc.org/gtksourceview-2.0/gtksourceview-2.0.tar.bz2</span><br><span class="line">http://www.valadoc.org/gtksourceview-3.0/gtksourceview-3.0.tar.bz2</span><br><span class="line">http://www.valadoc.org/gudev-1.0/gudev-1.0.tar.bz2</span><br></pre></td></tr></table></figure></p>
-<p>下载解压<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">▶ for i in `cat valadoc.list`; do wget $i &amp;&amp; tar -xf `basename $i` -C ~/.local/share/devhelp/books/; done</span><br></pre></td></tr></table></figure></p>
+        <p>一直上valadoc.org看，网速不对头，感觉偶尔被封。</p>
+<p>先这样爬一下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">▶ curl https://valadoc.org | grep devhelp | cut -c33- | sed &apos;s/&quot;&gt;.*$//&apos;</span><br></pre></td></tr></table></figure></p>
+<p>得到一个列表，类似这样的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/xcb-randr/xcb-randr.tar.bz2</span><br><span class="line">/xcb-render/xcb-render.tar.bz2</span><br><span class="line">/xcb-res/xcb-res.tar.bz2</span><br><span class="line">/xcb-shape/xcb-shape.tar.bz2</span><br><span class="line">/xcb-shm/xcb-shm.tar.bz2</span><br><span class="line">/xcb-sync/xcb-sync.tar.bz2</span><br><span class="line">/xcb-xfixes/xcb-xfixes.tar.bz2</span><br></pre></td></tr></table></figure></p>
+<p>附加上网址。丢一个文件里面去。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">http://www.valadoc.org/gtk+-2.0/gtk+-2.0.tar.bz2</span><br><span class="line">http://www.valadoc.org/gtk+-3.0/gtk+-3.0.tar.bz2</span><br><span class="line">http://www.valadoc.org/gtk-vnc-2.0/gtk-vnc-2.0.tar.bz2</span><br><span class="line">http://www.valadoc.org/gtkmozembed/gtkmozembed.tar.bz2</span><br><span class="line">http://www.valadoc.org/gtksourceview-2.0/gtksourceview-2.0.tar.bz2</span><br><span class="line">http://www.valadoc.org/gtksourceview-3.0/gtksourceview-3.0.tar.bz2</span><br><span class="line">http://www.valadoc.org/gudev-1.0/gudev-1.0.tar.bz2</span><br></pre></td></tr></table></figure></p>
+<p>下载解压。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">▶ for i in `cat valadoc.list`; do wget $i &amp;&amp; tar -xf `basename $i` -C ~/.local/share/devhelp/books/; done</span><br></pre></td></tr></table></figure></p>
 <p>在devhelp里面选择只显示vala语言。这下方便多了。devhelp其实蛮好用的。</p>
 
       
