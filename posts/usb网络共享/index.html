@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Usb网络共享 - Eexpss 文档</title><meta name="Description" content=""><meta property="og:title" content="Usb网络共享" />
+<meta property="og:description" content="android 共享网络 usb 连接 usb连接。 手机：选择 usb 网络共享开关。 电脑： 使用 ip a(ad/add/address) 可见 usb0，但没有 IP 地址。 sudo dhclient usb0 可见有 IP 地址了。 ⭕ ip route default via 192.168.247.194 dev usb0 关闭无" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://eexpress.github.io/posts/usb%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB/" />
+<meta property="og:image" content="https://eexpress.github.io/avatar.png"/>
+<meta property="article:published_time" content="2022-03-08T03:36:15+08:00" />
+<meta property="article:modified_time" content="2022-03-08T03:36:15+08:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://eexpress.github.io/avatar.png"/>
+
+<meta name="twitter:title" content="Usb网络共享"/>
+<meta name="twitter:description" content="android 共享网络 usb 连接 usb连接。 手机：选择 usb 网络共享开关。 电脑： 使用 ip a(ad/add/address) 可见 usb0，但没有 IP 地址。 sudo dhclient usb0 可见有 IP 地址了。 ⭕ ip route default via 192.168.247.194 dev usb0 关闭无"/>
+<meta name="application-name" content="Eexpss 文档">
+<meta name="apple-mobile-web-app-title" content="Eexpss 文档"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://eexpress.github.io/posts/usb%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB/" /><link rel="prev" href="https://eexpress.github.io/posts/perl%E7%A8%8B%E5%BA%8Fdebug/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Usb网络共享",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/eexpress.github.io\/posts\/usb%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB\/"
+        },"genre": "posts","wordcount":  361 ,
+        "url": "https:\/\/eexpress.github.io\/posts\/usb%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB\/","datePublished": "2022-03-08T03:36:15+08:00","dateModified": "2022-03-08T03:36:15+08:00","publisher": {
+            "@type": "Organization",
+            "name": "作者"},"author": {
+                "@type": "Person",
+                "name": "作者"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Eexpss 文档">Eexpss 文档</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Eexpss 文档">Eexpss 文档</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Usb网络共享</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-08">2022-03-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 361 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#usb-连接">usb 连接</a></li>
+    <li><a href="#netshare-等软件">NetShare 等软件</a></li>
+    <li><a href="#同时使用双路由">同时使用双路由</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="android-共享网络">android 共享网络</h1>
+<h2 id="usb-连接">usb 连接</h2>
+<ul>
+<li>usb连接。</li>
+<li><code>手机：</code>选择 usb 网络共享开关。
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="usb%e7%bd%91%e7%bb%9c%e5%85%b1%e4%ba%ab.jpg"
+        data-srcset="usb%e7%bd%91%e7%bb%9c%e5%85%b1%e4%ba%ab.jpg, usb%e7%bd%91%e7%bb%9c%e5%85%b1%e4%ba%ab.jpg 1.5x, usb%e7%bd%91%e7%bb%9c%e5%85%b1%e4%ba%ab.jpg 2x"
+        data-sizes="auto"
+        alt="usb网络共享.jpg"
+        title="usb网络共享" /></li>
+<li><code>电脑：</code> 使用 <code>ip a(ad/add/address)</code> 可见 usb0，但没有 IP 地址。</li>
+<li><code>sudo dhclient usb0</code></li>
+<li>可见有 IP 地址了。</li>
+</ul>
+<pre><code>⭕ ip route
+default via 192.168.247.194 dev usb0
+</code></pre><ul>
+<li>关闭无线。正常上网，但vpn是不能共享的。</li>
+<li><code>https://wiki.archlinux.org/title/android_tethering</code> 居然还有udev规则，可以在插入时自动调整网络以将手机用作网关。<code>/etc/udev/rules.d/90-android-tethering.rules</code>。</li>
+</ul>
+<h2 id="netshare-等软件">NetShare 等软件</h2>
+<ul>
+<li><code>手机：</code>安装 NetShare。</li>
+<li>开启 WiFi 热点。</li>
+<li>打开 WPS 开关。</li>
+<li><code>电脑：</code>安装手机界面提示，连接热点。</li>
+<li>设置网络代理，手动。IP 和 Port 照抄。</li>
+<li>关闭其他网络连接，比如usb0。</li>
+<li>正常使用vpn上网。只是每次 IP 都改变，每次要设置不同的代理。注意 default 后的 IP 是对应的。</li>
+</ul>
+<pre><code>⭕ ip route
+default via 192.168.151.24 dev wlp3s0 proto dhcp metric 20600
+</code></pre><h2 id="同时使用双路由">同时使用双路由</h2>
+<ul>
+<li>都打开，要不我的翻译扩展被代理卡住。</li>
+<li>常规的走 usb0。</li>
+<li>代理的走 wlp3s0。</li>
+</ul>
+<pre><code>⭕ ip route
+default via 192.168.130.9 dev usb0
+default via 192.168.8.121 dev wlp3s0 proto dhcp metric 20600
+</code></pre></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-03-08</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/perl%E7%A8%8B%E5%BA%8Fdebug/" class="prev" rel="prev" title="perl程序debug"><i class="fas fa-angle-left fa-fw"></i>perl程序debug</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.80.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"search":{"highlightTag":"em","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

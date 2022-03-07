@@ -1,0 +1,42 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>所有文章 - Eexpss 文档</title>
+        <link>https://eexpress.github.io/posts/</link>
+        <description>所有文章 | Eexpss 文档</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 08 Mar 2022 03:36:15 &#43;0800</lastBuildDate><atom:link href="https://eexpress.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Usb网络共享</title>
+    <link>https://eexpress.github.io/posts/usb%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB/</link>
+    <pubDate>Tue, 08 Mar 2022 03:36:15 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://eexpress.github.io/posts/usb%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB/</guid>
+    <description><![CDATA[android 共享网络 usb 连接 usb连接。 手机：选择 usb 网络共享开关。 电脑： 使用 ip a(ad/add/address) 可见 usb0，但没有 IP 地址。 sudo dhclient usb0 可见有 IP 地址了。 ⭕ ip route default via 192.168.247.194 dev usb0 关闭无]]></description>
+</item><item>
+    <title>perl程序debug</title>
+    <link>https://eexpress.github.io/posts/perl%E7%A8%8B%E5%BA%8Fdebug/</link>
+    <pubDate>Sat, 19 Feb 2022 21:46:56 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://eexpress.github.io/posts/perl%E7%A8%8B%E5%BA%8Fdebug/</guid>
+    <description><![CDATA[perl程序debug 基础点： h 帮助 n 下一步next，跳过sub子函数； s 单步调试，可以进入sub子函数；r 跳出子函数调试； p 打印表达式的结]]></description>
+</item><item>
+    <title>编辑器常规必要热键</title>
+    <link>https://eexpress.github.io/posts/%E7%BC%96%E8%BE%91%E5%99%A8%E5%B8%B8%E8%A7%84%E5%BF%85%E8%A6%81%E7%83%AD%E9%94%AE/</link>
+    <pubDate>Fri, 29 Oct 2021 04:16:13 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://eexpress.github.io/posts/%E7%BC%96%E8%BE%91%E5%99%A8%E5%B8%B8%E8%A7%84%E5%BF%85%E8%A6%81%E7%83%AD%E9%94%AE/</guid>
+    <description><![CDATA[geany - gedit 功能 geany gedit Move.上下移动行 Alt-Fn-⬆/⬇ Alt-PageUp/PageDown Alt-⬆/⬇ Duplicate.复制选中文字/行 Ctrl-D Kill.删除行 Ctrl-K Ctrl-D 复制/剪切行]]></description>
+</item><item>
+    <title>perl内置变量的列表</title>
+    <link>https://eexpress.github.io/posts/perl%E5%86%85%E7%BD%AE%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%97%E8%A1%A8/</link>
+    <pubDate>Tue, 08 Dec 2009 19:41:09 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://eexpress.github.io/posts/perl%E5%86%85%E7%BD%AE%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%97%E8%A1%A8/</guid>
+    <description><![CDATA[Perl内置变量的列表 $- 当前页可打印的行数,属于Perl格式系统的一部分 $! 根据上下文内容返回错误号或者错误串 $” 列表分隔符 $# 打印数字时默认的]]></description>
+</item><item>
+    <title>perl命令行参数</title>
+    <link>https://eexpress.github.io/posts/perl%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/</link>
+    <pubDate>Tue, 08 Dec 2009 19:41:09 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://eexpress.github.io/posts/perl%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/</guid>
+    <description><![CDATA[命令行参数 -i[extension] edit &lt;&gt; files in place (makes backup if extension supplied) 和sed一样。直接编辑文件。带扩展名，就产生备份文件，比如-i.bak。 perl -p -i.bak -e &#39;s/\bfoo\b/bar/g&#39; *.c perl -pie &#39;s/\bfoo\b/bar/g&#39; *.c #不要备份 -n assume &ldquo;while]]></description>
+</item></channel>
+</rss>
