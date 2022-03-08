@@ -6,7 +6,7 @@
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title>Vim动态执行编译 - Eexpss 文档</title><meta name="Description" content=""><meta property="og:title" content="Vim动态执行编译" />
-<meta property="og:description" content="最近突然编译需求来了。每一个文件的依赖库都不同，以前vim的编译函数都是扯谈了。干脆写了一个通用的方法的函数。 &quot;============ &lt;F5&gt; 运行前五行注释中的命令 ========= map" />
+<meta property="og:description" content="最近突然编译需求来了。每一个文件的依赖库都不同，以前vim的编译函数都是扯谈了。干脆写了一个通用的方法的函数。 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://eexpress.github.io/posts/vim%E5%8A%A8%E6%80%81%E6%89%A7%E8%A1%8C%E7%BC%96%E8%AF%91/" />
 <meta property="og:image" content="https://eexpress.github.io/avatar.png"/>
@@ -16,7 +16,7 @@
 <meta name="twitter:image" content="https://eexpress.github.io/avatar.png"/>
 
 <meta name="twitter:title" content="Vim动态执行编译"/>
-<meta name="twitter:description" content="最近突然编译需求来了。每一个文件的依赖库都不同，以前vim的编译函数都是扯谈了。干脆写了一个通用的方法的函数。 &quot;============ &lt;F5&gt; 运行前五行注释中的命令 ========= map"/>
+<meta name="twitter:description" content="最近突然编译需求来了。每一个文件的依赖库都不同，以前vim的编译函数都是扯谈了。干脆写了一个通用的方法的函数。 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15"/>
 <meta name="application-name" content="Eexpss 文档">
 <meta name="apple-mobile-web-app-title" content="Eexpss 文档"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/eexpress.github.io\/posts\/vim%E5%8A%A8%E6%80%81%E6%89%A7%E8%A1%8C%E7%BC%96%E8%AF%91\/"
-        },"genre": "posts","wordcount":  430 ,
+        },"genre": "posts","keywords": "vim, gedit","wordcount":  474 ,
         "url": "https:\/\/eexpress.github.io\/posts\/vim%E5%8A%A8%E6%80%81%E6%89%A7%E8%A1%8C%E7%BC%96%E8%AF%91\/","datePublished": "2019-04-02T00:08:34+00:00","dateModified": "2019-04-02T00:08:34+00:00","publisher": {
             "@type": "Organization",
             "name": "作者"},"author": {
@@ -38,7 +38,7 @@
             },"description": ""
     }
     </script></head>
-    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -46,18 +46,7 @@
             <a href="/" title="Eexpss 文档">Eexpss 文档</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
-                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
-                        </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
-                        </a>
-                        <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
-                        </span>
-                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                     <i class="fas fa-adjust fa-fw"></i>
                 </a>
             </div>
@@ -73,23 +62,7 @@
                 <span></span><span></span><span></span>
             </div>
         </div>
-        <div class="menu" id="menu-mobile"><div class="search-wrapper">
-                    <div class="search mobile" id="search-mobile">
-                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
-                            <i class="fas fa-search fa-fw"></i>
-                        </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
-                            <i class="fas fa-times-circle fa-fw"></i>
-                        </a>
-                        <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
-                        </span>
-                    </div>
-                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
-                        取消
-                    </a>
-                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
             </a></div>
     </div>
@@ -106,7 +79,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Vim动态执行编译</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-04-02">2019-04-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 430 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-04-02">2019-04-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 474 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -119,65 +92,136 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p>最近突然编译需求来了。每一个文件的依赖库都不同，以前vim的编译函数都是扯谈了。干脆写了一个通用的方法的函数。</p>
-<pre><code>&quot;============ &lt;F5&gt; 运行前五行注释中的命令 =========
-map &lt;F5&gt; :call RunComment()&lt;CR&gt;
-func RunComment()
-	let n = 1
-	while n &lt; 5
-		let l=getline(n)
-		if l =~ '//!'
-			echo strpart(l, stridx(l, &quot;!&quot;))
-			exec strpart(l, stridx(l, &quot;!&quot;))
-			if v:shell_error
-				echo &quot;=================== exec error !!! ==================&quot;
-				break
-			endif
-
-		endif
-		let n = n + 1
-	endwhile
-endfunc
-</code></pre><p>源码里面类似这样的，直接写编译命令。反正只认包含&quot;//!&ldquo;的行。</p>
-<pre><code>▶ head -n 5 ~/bin/showit/showsvgpngtxt.vala
-//▶ valac --pkg gtk+-3.0 --pkg librsvg-2.0 showsvgpngtxt.vala
-//!valac --pkg gtk+-3.0 --pkg librsvg-2.0 %
-//!./%&lt;
-using Gtk;
-using Cairo;
-</code></pre><hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-vim" data-lang="vim"><span class="c">&#34;============ &lt;F5&gt; 运行前五行注释中的命令 =========</span><span class="err">
+</span><span class="err"></span><span class="nx">map</span> <span class="p">&lt;</span><span class="nx">F5</span><span class="p">&gt;</span> :<span class="nx">call</span> <span class="nx">RunComment</span><span class="p">()&lt;</span><span class="nx">CR</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="nx">func</span> <span class="nx">RunComment</span><span class="p">()</span><span class="err">
+</span><span class="err"></span>	<span class="k">let</span> <span class="nx">n</span> <span class="p">=</span> <span class="m">1</span><span class="err">
+</span><span class="err"></span>	<span class="nx">while</span> <span class="nx">n</span> <span class="p">&lt;</span> <span class="m">5</span><span class="err">
+</span><span class="err"></span>		<span class="k">let</span> <span class="nx">l</span><span class="p">=</span><span class="nx">getline</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>		<span class="k">if</span> <span class="nx">l</span> <span class="p">=~</span> <span class="s1">&#39;//!&#39;</span><span class="err">
+</span><span class="err"></span>			<span class="nx">echo</span> <span class="nx">strpart</span><span class="p">(</span><span class="nx">l</span><span class="p">,</span> <span class="nx">stridx</span><span class="p">(</span><span class="nx">l</span><span class="p">,</span> <span class="s2">&#34;!&#34;</span><span class="p">))</span><span class="err">
+</span><span class="err"></span>			<span class="nx">exec</span> <span class="nx">strpart</span><span class="p">(</span><span class="nx">l</span><span class="p">,</span> <span class="nx">stridx</span><span class="p">(</span><span class="nx">l</span><span class="p">,</span> <span class="s2">&#34;!&#34;</span><span class="p">))</span><span class="err">
+</span><span class="err"></span>			<span class="k">if</span> <span class="nx">v</span>:<span class="nx">shell_error</span><span class="err">
+</span><span class="err"></span>				<span class="nx">echo</span> <span class="s2">&#34;=================== exec error !!! ==================&#34;</span><span class="err">
+</span><span class="err"></span>				<span class="nx">break</span><span class="err">
+</span><span class="err"></span>			<span class="k">endif</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span>		<span class="k">endif</span><span class="err">
+</span><span class="err"></span>		<span class="k">let</span> <span class="nx">n</span> <span class="p">=</span> <span class="nx">n</span> <span class="p">+</span> <span class="m">1</span><span class="err">
+</span><span class="err"></span>	<span class="nx">endwhile</span><span class="err">
+</span><span class="err"></span><span class="nx">endfunc</span><span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>源码里面类似这样的，直接写编译命令。反正只认包含&quot;//!&ldquo;的行。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="err">▶</span> <span class="n">head</span> <span class="p">-</span><span class="n">n</span> <span class="m">5</span> <span class="p">~/</span><span class="n">bin</span><span class="p">/</span><span class="n">showit</span><span class="p">/</span><span class="n">showsvgpngtxt</span><span class="p">.</span><span class="n">vala</span>
+<span class="c1">//▶ valac --pkg gtk+-3.0 --pkg librsvg-2.0 showsvgpngtxt.vala
+</span><span class="c1">//!valac --pkg gtk+-3.0 --pkg librsvg-2.0 %
+</span><span class="c1">//!./%&lt;
+</span><span class="c1"></span><span class="k">using</span> <span class="nn">Gtk</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Cairo</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><hr>
 <p>又找到一个<code>v:shell_error</code>，类似shell的<code>$?</code>可判断编译时候成功。</p>
 <h2 id="gedit动态执行编译">gedit动态执行编译</h2>
 <p><strong>外部工具</strong>真强大，通过管道调用各种脚本，再管道返回。</p>
-<pre><code>⭕ cat ~/.config/gedit/tools/F5执行前5行内的命令
-#!/bin/perl
-# [Gedit Tool]
-# Name=F5执行前5行内的命令
-# Input=nothing
-# Output=output-panel
-# Applicability=titled
-# Save-files=nothing
-# Shortcut=F5
-# Languages=
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-perl" data-lang="perl"><span class="err">⭕</span> <span class="n">cat</span> <span class="o">~</span><span class="sr">/.config/g</span><span class="n">edit</span><span class="sr">/tools/</span><span class="n">F5执行前5行内的命令</span>
+<span class="c1">#!/bin/perl</span>
+<span class="c1"># [Gedit Tool]</span>
+<span class="c1"># Name=F5执行前5行内的命令</span>
+<span class="c1"># Input=nothing</span>
+<span class="c1"># Output=output-panel</span>
+<span class="c1"># Applicability=titled</span>
+<span class="c1"># Save-files=nothing</span>
+<span class="c1"># Shortcut=F5</span>
+<span class="c1"># Languages=</span>
 
 
-# https://wiki.gnome.org/Apps/Gedit/Plugins/ExternalTools
+<span class="c1"># https://wiki.gnome.org/Apps/Gedit/Plugins/ExternalTools</span>
 
-use 5.010;
+<span class="k">use</span> <span class="mf">5.010</span><span class="p">;</span>
 
-chdir $ENV{GEDIT_CURRENT_DOCUMENT_DIR};
-open IN,&quot;&lt;$ENV{GEDIT_CURRENT_DOCUMENT_PATH}&quot; or die $!;
-@_ = split '\n', &lt;IN&gt;.&lt;IN&gt;.&lt;IN&gt;.&lt;IN&gt;.&lt;IN&gt;;
-for(@_){
-	next if ! m'//!';
-	$cmd = $';
- 	$cmd =~ s/%f/$ENV{GEDIT_CURRENT_DOCUMENT_NAME}/;
-	print &quot;当前目录：&quot;.`pwd`;
-	say &quot;执行命令：&quot;.$cmd;
-	say &quot;-----------------------------------------&quot;;
-	say `$cmd`;
-	say &quot;输出无错误&quot; if $? eq 0;
-}
-</code></pre></div><div class="post-footer" id="post-footer">
+<span class="nb">chdir</span> <span class="nv">$ENV</span><span class="p">{</span><span class="n">GEDIT_CURRENT_DOCUMENT_DIR</span><span class="p">};</span>
+<span class="nb">open</span> <span class="n">IN</span><span class="p">,</span><span class="s">&#34;&lt;$ENV{GEDIT_CURRENT_DOCUMENT_PATH}&#34;</span> <span class="ow">or</span> <span class="nb">die</span> <span class="vg">$!</span><span class="p">;</span>
+<span class="nv">@_</span> <span class="o">=</span> <span class="nb">split</span> <span class="s">&#39;\n&#39;</span><span class="p">,</span> <span class="sr">&lt;IN&gt;</span><span class="o">.</span><span class="sr">&lt;IN&gt;</span><span class="o">.</span><span class="sr">&lt;IN&gt;</span><span class="o">.</span><span class="sr">&lt;IN&gt;</span><span class="o">.</span><span class="sr">&lt;IN&gt;</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="nv">@_</span><span class="p">){</span>
+	<span class="k">next</span> <span class="k">if</span> <span class="o">!</span> <span class="n">m</span><span class="s">&#39;//!&#39;</span><span class="p">;</span>
+	<span class="nv">$cmd</span> <span class="o">=</span> <span class="vg">$&#39;</span><span class="p">;</span>
+ 	<span class="nv">$cmd</span> <span class="o">=~</span> <span class="sr">s/%f/$ENV{GEDIT_CURRENT_DOCUMENT_NAME}/</span><span class="p">;</span>
+	<span class="k">print</span> <span class="s">&#34;当前目录：&#34;</span><span class="o">.</span><span class="sb">`pwd`</span><span class="p">;</span>
+	<span class="n">say</span> <span class="s">&#34;执行命令：&#34;</span><span class="o">.</span><span class="nv">$cmd</span><span class="p">;</span>
+	<span class="n">say</span> <span class="s">&#34;-----------------------------------------&#34;</span><span class="p">;</span>
+	<span class="n">say</span> <span class="sb">`$cmd`</span><span class="p">;</span>
+	<span class="n">say</span> <span class="s">&#34;输出无错误&#34;</span> <span class="k">if</span> <span class="vg">$?</span> <span class="ow">eq</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -194,7 +238,7 @@ for(@_){
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/vim/">vim</a>,&nbsp;<a href="/tags/gedit/">gedit</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
@@ -215,5 +259,5 @@ for(@_){
             </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
                 <i class="fas fa-comment fa-fw"></i>
             </a>
-        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"search":{"highlightTag":"em","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

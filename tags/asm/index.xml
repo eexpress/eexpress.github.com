@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>asm - 标签 - Eexpss 文档</title>
+        <link>https://eexpress.github.io/tags/asm/</link>
+        <description>asm - 标签 - Eexpss 文档</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 06 Oct 2005 03:36:15 &#43;0800</lastBuildDate><atom:link href="https://eexpress.github.io/tags/asm/" rel="self" type="application/rss+xml" /><item>
+    <title>让汇编象C一样强壮</title>
+    <link>https://eexpress.github.io/posts/%E8%AE%A9%E6%B1%87%E7%BC%96%E8%B1%A1c%E4%B8%80%E6%A0%B7%E5%BC%BA%E5%A3%AE/</link>
+    <pubDate>Thu, 06 Oct 2005 03:36:15 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://eexpress.github.io/posts/%E8%AE%A9%E6%B1%87%E7%BC%96%E8%B1%A1c%E4%B8%80%E6%A0%B7%E5%BC%BA%E5%A3%AE/</guid>
+    <description><![CDATA[在大多数的单片机中，汇编是不可缺少的一种技能。他是最底层的一种语言，最直接的一种控制方式，也是最麻烦的、最容易出错的一种重复性工作。 汇编的出]]></description>
+</item></channel>
+</rss>

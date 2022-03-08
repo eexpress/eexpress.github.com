@@ -1,0 +1,28 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>perl - 标签 - Eexpss 文档</title>
+        <link>https://eexpress.github.io/tags/perl/</link>
+        <description>perl - 标签 - Eexpss 文档</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 19 Feb 2022 21:46:56 &#43;0000</lastBuildDate><atom:link href="https://eexpress.github.io/tags/perl/" rel="self" type="application/rss+xml" /><item>
+    <title>perl程序debug</title>
+    <link>https://eexpress.github.io/posts/perl%E7%A8%8B%E5%BA%8Fdebug/</link>
+    <pubDate>Sat, 19 Feb 2022 21:46:56 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://eexpress.github.io/posts/perl%E7%A8%8B%E5%BA%8Fdebug/</guid>
+    <description><![CDATA[1 perl -d /path/to/program 基础点： h 帮助 n 下一步next，跳过sub子函数； s 单步调试，可以进入sub子函数；r 跳出子函数调试； 回车。重复执行前面一条 n 或者 s]]></description>
+</item><item>
+    <title>perl内置变量的列表</title>
+    <link>https://eexpress.github.io/posts/perl%E5%86%85%E7%BD%AE%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%97%E8%A1%A8/</link>
+    <pubDate>Tue, 08 Dec 2009 19:41:09 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://eexpress.github.io/posts/perl%E5%86%85%E7%BD%AE%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%97%E8%A1%A8/</guid>
+    <description><![CDATA[Perl内置变量的列表 $- 当前页可打印的行数,属于Perl格式系统的一部分 $! 根据上下文内容返回错误号或者错误串 $” 列表分隔符 $# 打印数字时默认的]]></description>
+</item><item>
+    <title>perl命令行参数</title>
+    <link>https://eexpress.github.io/posts/perl%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/</link>
+    <pubDate>Tue, 08 Dec 2009 19:41:09 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://eexpress.github.io/posts/perl%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/</guid>
+    <description><![CDATA[命令行参数 -i[extension] edit &lt;&gt; files in place (makes backup if extension supplied) 和sed一样。直接编辑文件。带扩展名，就产生备份文件，比如-i.bak。 1 2 perl -p -i.bak -e &#39;s/\bfoo\b/bar/g&#39; *.c perl -pie &#39;s/\bfoo\b/bar/g&#39; *.c #不要备份 -n]]></description>
+</item></channel>
+</rss>

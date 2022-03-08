@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>vim - 标签 - Eexpss 文档</title>
+        <link>https://eexpress.github.io/tags/vim/</link>
+        <description>vim - 标签 - Eexpss 文档</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 02 Apr 2019 00:08:34 &#43;0000</lastBuildDate><atom:link href="https://eexpress.github.io/tags/vim/" rel="self" type="application/rss+xml" /><item>
+    <title>Vim动态执行编译</title>
+    <link>https://eexpress.github.io/posts/vim%E5%8A%A8%E6%80%81%E6%89%A7%E8%A1%8C%E7%BC%96%E8%AF%91/</link>
+    <pubDate>Tue, 02 Apr 2019 00:08:34 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://eexpress.github.io/posts/vim%E5%8A%A8%E6%80%81%E6%89%A7%E8%A1%8C%E7%BC%96%E8%AF%91/</guid>
+    <description><![CDATA[最近突然编译需求来了。每一个文件的依赖库都不同，以前vim的编译函数都是扯谈了。干脆写了一个通用的方法的函数。 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15]]></description>
+</item></channel>
+</rss>
