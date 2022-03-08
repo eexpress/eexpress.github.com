@@ -6,7 +6,7 @@
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title>Usb网络共享 - Eexpss 文档</title><meta name="Description" content=""><meta property="og:title" content="Usb网络共享" />
-<meta property="og:description" content="android 共享网络 usb 连接 usb连接。 手机：选择 usb 网络共享开关。 电脑： 使用 ip a(ad/add/address) 可见 usb0，但没有 IP 地址。 sudo dhclient usb0 可见有 IP 地址了。 ⭕ ip route default via 192.168.247.194 dev usb0 关闭无" />
+<meta property="og:description" content="android 共享网络 usb 连接 usb连接。 手机： _手动_选择 usb 网络共享开关。 电脑： 使用 ip a(ad/add/address) 可见 usb0，但没有 IP 地址。 sudo dhclient usb0 可见有 IP 地址了。 ⭕ ip route default via 192.168.247.194 dev" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://eexpress.github.io/posts/usb%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB/" />
 <meta property="og:image" content="https://eexpress.github.io/avatar.png"/>
@@ -16,7 +16,7 @@
 <meta name="twitter:image" content="https://eexpress.github.io/avatar.png"/>
 
 <meta name="twitter:title" content="Usb网络共享"/>
-<meta name="twitter:description" content="android 共享网络 usb 连接 usb连接。 手机：选择 usb 网络共享开关。 电脑： 使用 ip a(ad/add/address) 可见 usb0，但没有 IP 地址。 sudo dhclient usb0 可见有 IP 地址了。 ⭕ ip route default via 192.168.247.194 dev usb0 关闭无"/>
+<meta name="twitter:description" content="android 共享网络 usb 连接 usb连接。 手机： _手动_选择 usb 网络共享开关。 电脑： 使用 ip a(ad/add/address) 可见 usb0，但没有 IP 地址。 sudo dhclient usb0 可见有 IP 地址了。 ⭕ ip route default via 192.168.247.194 dev"/>
 <meta name="application-name" content="Eexpss 文档">
 <meta name="apple-mobile-web-app-title" content="Eexpss 文档"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/eexpress.github.io\/posts\/usb%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB\/"
-        },"genre": "posts","wordcount":  361 ,
+        },"genre": "posts","wordcount":  419 ,
         "url": "https:\/\/eexpress.github.io\/posts\/usb%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB\/","datePublished": "2022-03-08T03:36:15+08:00","dateModified": "2022-03-08T03:36:15+08:00","publisher": {
             "@type": "Organization",
             "name": "作者"},"author": {
@@ -106,7 +106,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Usb网络共享</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-08">2022-03-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 361 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-08">2022-03-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 419 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -116,15 +116,16 @@
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#usb-连接">usb 连接</a></li>
-    <li><a href="#netshare-等软件">NetShare 等软件</a></li>
+    <li><a href="#netshare-等软件-wireless">NetShare 等软件 (wireless)</a></li>
     <li><a href="#同时使用双路由">同时使用双路由</a></li>
+    <li><a href="#临时设置系统代理">临时设置系统代理。</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h1 id="android-共享网络">android 共享网络</h1>
 <h2 id="usb-连接">usb 连接</h2>
 <ul>
 <li>usb连接。</li>
-<li><code>手机：</code>选择 usb 网络共享开关。
+<li><code>手机：</code> _手动_选择 usb 网络共享开关。
 <img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -141,9 +142,15 @@
 default via 192.168.247.194 dev usb0
 </code></pre><ul>
 <li>关闭无线。正常上网，但vpn是不能共享的。</li>
-<li><code>https://wiki.archlinux.org/title/android_tethering</code> 居然还有udev规则，可以在插入时自动调整网络以将手机用作网关。<code>/etc/udev/rules.d/90-android-tethering.rules</code>。</li>
+<li><a href="https://wiki.archlinux.org/title/android_tethering" target="_blank" rel="noopener noreffer">arch.wiki</a> 居然还有udev规则，可以在插入时自动调整网络以将手机用作网关。<code>/etc/udev/rules.d/90-android-tethering.rules</code>。只是测试无效。</li>
 </ul>
-<h2 id="netshare-等软件">NetShare 等软件</h2>
+<pre><code>⭕ lsusb|g xiaomi
+Bus 001 Device 006: ID 2717:ff80 Xiaomi Inc. Mi/Redmi series (RNDIS)
+⭕ udevadm info /sys/class/net/usb0 |g ID_VENDOR_ID
+E: ID_VENDOR_ID=2717
+⭕ cat /etc/udev/rules.d/90-android-tethering.rules
+ACTION==&quot;add|remove&quot;, SUBSYSTEM==&quot;net&quot;, ATTR{idVendor}==&quot;2717&quot;, ATTR{idProduct}==&quot;ff80&quot;, SYMLINK+=&quot;android&quot;, RUN+=&quot;echo %k &gt;&gt; /home/eexpss/udev&quot;, RUN+=&quot;dhclient %k&quot;
+</code></pre><h2 id="netshare-等软件-wireless">NetShare 等软件 (wireless)</h2>
 <ul>
 <li><code>手机：</code>安装 NetShare。</li>
 <li>开启 WiFi 热点。</li>
@@ -164,7 +171,9 @@ default via 192.168.151.24 dev wlp3s0 proto dhcp metric 20600
 <pre><code>⭕ ip route
 default via 192.168.130.9 dev usb0
 default via 192.168.8.121 dev wlp3s0 proto dhcp metric 20600
-</code></pre></div><div class="post-footer" id="post-footer">
+</code></pre><h2 id="临时设置系统代理">临时设置系统代理。</h2>
+<p><code>proxy-setup.bash</code></p>
+</div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">

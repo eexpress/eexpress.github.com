@@ -11,7 +11,7 @@
     <pubDate>Tue, 08 Mar 2022 03:36:15 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://eexpress.github.io/posts/usb%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB/</guid>
-    <description><![CDATA[android 共享网络 usb 连接 usb连接。 手机：选择 usb 网络共享开关。 电脑： 使用 ip a(ad/add/address) 可见 usb0，但没有 IP 地址。 sudo dhclient usb0 可见有 IP 地址了。 ⭕ ip route default via 192.168.247.194 dev usb0 关闭无]]></description>
+    <description><![CDATA[android 共享网络 usb 连接 usb连接。 手机： _手动_选择 usb 网络共享开关。 电脑： 使用 ip a(ad/add/address) 可见 usb0，但没有 IP 地址。 sudo dhclient usb0 可见有 IP 地址了。 ⭕ ip route default via 192.168.247.194 dev]]></description>
 </item><item>
     <title>perl程序debug</title>
     <link>https://eexpress.github.io/posts/perl%E7%A8%8B%E5%BA%8Fdebug/</link>
@@ -40,5 +40,12 @@
     <author>作者</author>
     <guid>https://eexpress.github.io/posts/perl%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/</guid>
     <description><![CDATA[命令行参数 -i[extension] edit &lt;&gt; files in place (makes backup if extension supplied) 和sed一样。直接编辑文件。带扩展名，就产生备份文件，比如-i.bak。 perl -p -i.bak -e &#39;s/\bfoo\b/bar/g&#39; *.c perl -pie &#39;s/\bfoo\b/bar/g&#39; *.c #不要备份 -n assume &ldquo;while]]></description>
+</item><item>
+    <title>让汇编象C一样强壮</title>
+    <link>https://eexpress.github.io/posts/%E8%AE%A9%E6%B1%87%E7%BC%96%E8%B1%A1c%E4%B8%80%E6%A0%B7%E5%BC%BA%E5%A3%AE/</link>
+    <pubDate>Thu, 06 Oct 2005 03:36:15 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://eexpress.github.io/posts/%E8%AE%A9%E6%B1%87%E7%BC%96%E8%B1%A1c%E4%B8%80%E6%A0%B7%E5%BC%BA%E5%A3%AE/</guid>
+    <description><![CDATA[在大多数的单片机中，汇编是不可缺少的一种技能。他是最底层的一种语言，最直接的一种控制方式，也是最麻烦的、最容易出错的一种重复性工作。 汇编的出]]></description>
 </item></channel>
 </rss>
