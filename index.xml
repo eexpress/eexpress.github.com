@@ -18,7 +18,7 @@
     <pubDate>Sat, 19 Feb 2022 21:46:56 &#43;0000</pubDate>
     <author>作者</author>
     <guid>https://eexpress.github.io/posts/perl%E7%A8%8B%E5%BA%8Fdebug/</guid>
-    <description><![CDATA[perl程序debug 基础点： h 帮助 n 下一步next，跳过sub子函数； s 单步调试，可以进入sub子函数；r 跳出子函数调试； p 打印表达式的结]]></description>
+    <description><![CDATA[perl -d /path/to/program 基础点： h 帮助 n 下一步next，跳过sub子函数； s 单步调试，可以进入sub子函数；r 跳出子函数调试； 回车。重复执行前面一条 n 或者 s。]]></description>
 </item><item>
     <title>编辑器常规必要热键</title>
     <link>https://eexpress.github.io/posts/%E7%BC%96%E8%BE%91%E5%99%A8%E5%B8%B8%E8%A7%84%E5%BF%85%E8%A6%81%E7%83%AD%E9%94%AE/</link>
