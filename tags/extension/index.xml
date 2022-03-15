@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>extension - 标签 - Eexpss 文档</title>
+        <link>https://eexpress.github.io/tags/extension/</link>
+        <description>extension - 标签 - Eexpss 文档</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 15 Mar 2022 06:34:28 &#43;0800</lastBuildDate><atom:link href="https://eexpress.github.io/tags/extension/" rel="self" type="application/rss+xml" /><item>
+    <title>Gnome扩展杂谈</title>
+    <link>https://eexpress.github.io/posts/gnome%E6%89%A9%E5%B1%95%E6%9D%82%E8%B0%88/</link>
+    <pubDate>Tue, 15 Mar 2022 06:34:28 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://eexpress.github.io/posts/gnome%E6%89%A9%E5%B1%95%E6%9D%82%E8%B0%88/</guid>
+    <description><![CDATA[gnome-extension 是用JavaScript写的。框架叫GJS，基于mozilla的SpiderMonkey引擎，叫蜘蛛猴/猿。猿猴不分，猿似乎更适合中国土话]]></description>
+</item></channel>
+</rss>

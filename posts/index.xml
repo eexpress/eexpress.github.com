@@ -3,7 +3,14 @@
         <title>所有文章 - Eexpss 文档</title>
         <link>https://eexpress.github.io/posts/</link>
         <description>所有文章 | Eexpss 文档</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 08 Mar 2022 03:36:15 &#43;0800</lastBuildDate><atom:link href="https://eexpress.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 15 Mar 2022 06:34:28 &#43;0800</lastBuildDate><atom:link href="https://eexpress.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Gnome扩展杂谈</title>
+    <link>https://eexpress.github.io/posts/gnome%E6%89%A9%E5%B1%95%E6%9D%82%E8%B0%88/</link>
+    <pubDate>Tue, 15 Mar 2022 06:34:28 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://eexpress.github.io/posts/gnome%E6%89%A9%E5%B1%95%E6%9D%82%E8%B0%88/</guid>
+    <description><![CDATA[gnome-extension 是用JavaScript写的。框架叫GJS，基于mozilla的SpiderMonkey引擎，叫蜘蛛猴/猿。猿猴不分，猿似乎更适合中国土话]]></description>
+</item><item>
     <title>Usb网络共享</title>
     <link>https://eexpress.github.io/posts/usb%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB/</link>
     <pubDate>Tue, 08 Mar 2022 03:36:15 &#43;0800</pubDate>

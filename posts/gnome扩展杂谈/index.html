@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Gnome扩展杂谈 - Eexpss 文档</title><meta name="Description" content=""><meta property="og:title" content="Gnome扩展杂谈" />
+<meta property="og:description" content="gnome-extension 是用JavaScript写的。框架叫GJS，基于mozilla的SpiderMonkey引擎，叫蜘蛛猴/猿。猿猴不分，猿似乎更适合中国土话" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://eexpress.github.io/posts/gnome%E6%89%A9%E5%B1%95%E6%9D%82%E8%B0%88/" />
+<meta property="og:image" content="https://eexpress.github.io/avatar.png"/>
+<meta property="article:published_time" content="2022-03-15T06:34:28+08:00" />
+<meta property="article:modified_time" content="2022-03-15T06:34:28+08:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://eexpress.github.io/avatar.png"/>
+
+<meta name="twitter:title" content="Gnome扩展杂谈"/>
+<meta name="twitter:description" content="gnome-extension 是用JavaScript写的。框架叫GJS，基于mozilla的SpiderMonkey引擎，叫蜘蛛猴/猿。猿猴不分，猿似乎更适合中国土话"/>
+<meta name="application-name" content="Eexpss 文档">
+<meta name="apple-mobile-web-app-title" content="Eexpss 文档"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://eexpress.github.io/posts/gnome%E6%89%A9%E5%B1%95%E6%9D%82%E8%B0%88/" /><link rel="prev" href="https://eexpress.github.io/posts/usb%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Gnome扩展杂谈",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/eexpress.github.io\/posts\/gnome%E6%89%A9%E5%B1%95%E6%9D%82%E8%B0%88\/"
+        },"genre": "posts","keywords": "gnome, extension","wordcount":  1670 ,
+        "url": "https:\/\/eexpress.github.io\/posts\/gnome%E6%89%A9%E5%B1%95%E6%9D%82%E8%B0%88\/","datePublished": "2022-03-15T06:34:28+08:00","dateModified": "2022-03-15T06:34:28+08:00","publisher": {
+            "@type": "Organization",
+            "name": "作者"},"author": {
+                "@type": "Person",
+                "name": "作者"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Eexpss 文档">Eexpss 文档</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Eexpss 文档">Eexpss 文档</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Gnome扩展杂谈</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-15">2022-03-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1670 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#小白也可以写gnome的扩展">小白也可以写gnome的扩展。</a></li>
+        <li><a href="#开发步骤">开发步骤</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><blockquote>
+<p><code>gnome-extension</code> 是用<code>JavaScript</code>写的。框架叫<code>GJS</code>，基于<code>mozilla</code>的<code>SpiderMonkey</code>引擎，叫蜘蛛猴/猿。猿猴不分，猿似乎更适合中国土话。</p>
+</blockquote>
+<h3 id="小白也可以写gnome的扩展">小白也可以写gnome的扩展。</h3>
+<ul>
+<li>只要会C和一点点C++的概念。你就可以上手使用js。因为js本来也没有类，只是在ES6假假的定义了一个类的写法。</li>
+<li>学js是没必要的，第一次写扩展时，我在推上才知道有<code>闭包</code>，在stackoverflow才知道有<code>原型</code>。</li>
+<li>现在开发的好处就是不用频繁迭代了。现在的版本是从40开始的。在此之前，因为迭代开发的关系，导致不同的版本有不同的兼容问题。</li>
+<li>一些开发者都是从被抛弃的<code>Vala</code>过来的，居然和我有共同语言。</li>
+<li>话无遮拦，是我提倡的学习传统，叫<code>鸣学</code>。也就我一个人在<code>Matrix</code>的房间里面一顿乱说。</li>
+<li>开发资料的来源，只有<code>https://gjs-docs.gnome.org/</code>，<code>https://gitlab.gnome.org/GNOME/gnome-shell/tree/main/js/ui</code>和聊天室。</li>
+<li><code>gjs-docs</code>只是大概全的简易函数手册，反正gnome传统的手册都是那样，其实只能叫列表。</li>
+<li><code>gitlab...ui</code>就是看源码，真实的在你本机运行的源码。抄吧。</li>
+<li><code>Matrix</code>其实是和以前的irc桥接的聊天室，审查，开发，都在里面，平时好严肃。除开我进去乱聊。</li>
+</ul>
+<h3 id="开发步骤">开发步骤</h3>
+<ul>
+<li>手册都在<code>https://gjs.guide/</code>，规范要求和简单例子都有。虽然我也没看。</li>
+<li>连风格都规定了<code>CamelCase</code>和<code>smallCamelCase</code>等，我写了10个扩展后才知道。</li>
+<li>为了不被经常说格式问题，我才开始使用<code>clang-format</code>假假的格式化下代码。我喜欢<code>Webkit</code>的风格。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">⭕ cat ../_clang-format
+BasedOnStyle:  WebKit
+AllowShortBlocksOnASingleLine: Always
+AllowShortIfStatementsOnASingleLine: AllIfsAndElse
+BreakBeforeBraces: Attach
+TabWidth:        4
+UseTab:          Always
+AlignConsecutiveAssignments: true
+SpacesBeforeTrailingComments: 2
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>现在开发简单，新建扩展如下。<code>--template</code>是可以补全的。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">⭕ gnome-extensions create --uuid=speed@eexpss.gmail.com --name=&#34;Screen Net Speed&#34; --description=&#34;animation net speed on screen&#34; --template=indicator
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>根据模板，只是在<code>~/.local/share/gnome-shell/extensions/</code>产生2个或者3个固定的文件。<code>extension.js</code>，<code>metadata.json</code>，<code>stylesheet.css</code>(可选)。</li>
+<li>然后，赶紧在<code>github</code>建一个仓库，<code>clone</code>到本地，再把上面的文件移动到仓库，然后把文件<strong>链接</strong>回去。重点：在仓库里编写，在<code>X11</code>环境，<code>Alt-F2</code>按<code>r</code>按回车，重启，这样链接的文件就可立刻生效。</li>
+<li><code>wayland</code>下使用这样的命令，重启调试。设置屏幕分辨率，是在SO问了好久没人理，在聊天室问才知道的。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">env MUTTER_DEBUG_DUMMY_MODE_SPECS=1024x768 \
+dbus-run-session -- gnome-shell --nested --wayland
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>调试使用如下命令，查看错误。可以使用各种*Lint提前检查语法等基本错误，反正对比过后，我懒得折腾。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">⭕ type glog
+glog 是“journalctl -f -o cat /usr/bin/gnome-shell”的别名
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>打包使用如下命令，<code>--ex</code>可补全，是需要附加的资源文件。打包是<code>@uuid@.shell-extension.zip</code>这样的压缩包。后期虽然可以<code>zip -u</code>更新，但<code>gnome-extensions</code>支持自动编译<code>gschema</code>设置和<code>po</code>翻译等各种资源文件，省略手动过程。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">⭕ gnome-extensions pack -f --extra-source=Clock.js
+
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>发布在<code>https://extensions.gnome.org</code>的<code>Add yours</code>。然后等待审查。遇到过两三次，我提交后，网页才刷新，就显示通过了的，怀疑审查者的手抖了一下。</li>
+<li>每个扩展都支持在页面，手动提交屏幕截图和应用图标。这两项居然没纳入规范。我的图标一般都是精心制作的svg，网页却只支持png格式。屏幕截图可以gif，有人还厉害的在资源文件里面嵌入视频教程的。</li>
+<li>可能是为了强推js，凡是能js实现的，不能使用其他语言，一行bash能搞定的，必须一堆js来实现。因为某些库被阉割，可能导致实现起来蛮复杂的。比如<code>GLib</code>和<code>Cairo</code>的某些函数不被支持。</li>
+<li>审查不能夹带私货的，不明确的配置，后期可能在线更新的都不行。会被说：这会导致偷偷挖矿，可能引起国际争端，一堆严重的玩笑。🤣</li>
+<li><code>Holmes</code>帮我第一个扩展。<code>Just.P</code>一直帮忙。<code>Simon</code>最认真的精确帮忙。<code>GdH</code> <code>Romain</code>也都热心。被卡住的时候，瞎聊才能开阔思路。</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-03-15</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/gnome/">gnome</a>,&nbsp;<a href="/tags/extension/">extension</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/usb%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB/" class="prev" rel="prev" title="Usb网络共享"><i class="fas fa-angle-left fa-fw"></i>Usb网络共享</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.80.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
