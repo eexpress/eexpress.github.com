@@ -3,7 +3,21 @@
         <title>Tags - 标签 - Eexpss 文档</title>
         <link>https://eexpress.github.io/tags/</link>
         <description>Tags - 标签 - Eexpss 文档</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 15 Mar 2022 06:34:28 &#43;0800</lastBuildDate><atom:link href="https://eexpress.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 19 Mar 2022 16:29:45 &#43;0800</lastBuildDate><atom:link href="https://eexpress.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>perl</title>
+    <link>https://eexpress.github.io/tags/perl/</link>
+    <pubDate>Sat, 19 Mar 2022 16:29:45 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://eexpress.github.io/tags/perl/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>regex</title>
+    <link>https://eexpress.github.io/tags/regex/</link>
+    <pubDate>Sat, 19 Mar 2022 16:29:45 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://eexpress.github.io/tags/regex/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>extension</title>
     <link>https://eexpress.github.io/tags/extension/</link>
     <pubDate>Tue, 15 Mar 2022 06:34:28 &#43;0800</pubDate>
@@ -39,13 +53,6 @@
     <guid>https://eexpress.github.io/tags/usb/</guid>
     <description><![CDATA[]]></description>
 </item><item>
-    <title>perl</title>
-    <link>https://eexpress.github.io/tags/perl/</link>
-    <pubDate>Sat, 19 Feb 2022 21:46:56 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://eexpress.github.io/tags/perl/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
     <title>geany</title>
     <link>https://eexpress.github.io/tags/geany/</link>
     <pubDate>Fri, 29 Oct 2021 04:16:13 &#43;0800</pubDate>
@@ -65,13 +72,6 @@
     <pubDate>Tue, 02 Apr 2019 00:08:34 &#43;0000</pubDate>
     <author>作者</author>
     <guid>https://eexpress.github.io/tags/vim/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>asm</title>
-    <link>https://eexpress.github.io/tags/asm/</link>
-    <pubDate>Thu, 06 Oct 2005 03:36:15 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://eexpress.github.io/tags/asm/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>
