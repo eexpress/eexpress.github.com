@@ -3,9 +3,16 @@
         <title>Eexpss 文档</title>
         <link>https://eexpress.github.io/</link>
         <description>Eexpss 文档</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 19 Mar 2022 16:29:45 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 18 Apr 2022 13:51:50 &#43;0800</lastBuildDate>
             <atom:link href="https://eexpress.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Gimp对齐方法</title>
+    <link>https://eexpress.github.io/posts/gimp%E5%AF%B9%E9%BD%90%E6%96%B9%E6%B3%95/</link>
+    <pubDate>Mon, 18 Apr 2022 13:51:50 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://eexpress.github.io/posts/gimp%E5%AF%B9%E9%BD%90%E6%96%B9%E6%B3%95/</guid>
+    <description><![CDATA[将原始图片的小人均匀排列 方框（R）选择第一个小人 按ctrl+魔法棒（U），减去空白区域 ctrl-x剪切 编辑-粘贴为-新建图层 切换到底层，选择]]></description>
+</item><item>
     <title>正则的断言</title>
     <link>https://eexpress.github.io/posts/%E6%AD%A3%E5%88%99%E7%9A%84%E6%96%AD%E8%A8%80/</link>
     <pubDate>Sat, 19 Mar 2022 16:29:45 &#43;0800</pubDate>

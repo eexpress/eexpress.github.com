@@ -8,10 +8,10 @@
         <title>让汇编象C一样强壮 - Eexpss 文档</title><meta name="Description" content=""><meta property="og:title" content="让汇编象C一样强壮" />
 <meta property="og:description" content="在大多数的单片机中，汇编是不可缺少的一种技能。他是最底层的一种语言，最直接的一种控制方式，也是最麻烦的、最容易出错的一种重复性工作。 汇编的出" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://eexpress.github.io/posts/%E8%AE%A9%E6%B1%87%E7%BC%96%E8%B1%A1c%E4%B8%80%E6%A0%B7%E5%BC%BA%E5%A3%AE/" />
-<meta property="og:image" content="https://eexpress.github.io/avatar.png"/>
+<meta property="og:url" content="https://eexpress.github.io/posts/%E8%AE%A9%E6%B1%87%E7%BC%96%E8%B1%A1c%E4%B8%80%E6%A0%B7%E5%BC%BA%E5%A3%AE/" /><meta property="og:image" content="https://eexpress.github.io/avatar.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2005-10-06T03:36:15+08:00" />
 <meta property="article:modified_time" content="2005-10-06T03:36:15+08:00" />
+
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://eexpress.github.io/avatar.png"/>
 
@@ -108,7 +108,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -128,7 +128,7 @@
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="c">;**
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="c">;**
 </span><span class="c"></span><span class="nf">Org</span> <span class="no">Ram</span>
 <span class="c">;———————————————————
 </span><span class="c">; Static. &lt;&lt; Public &gt;&gt; 静态
@@ -151,7 +151,7 @@
 </div><p>接着，定义函数调用的规则。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -210,7 +210,7 @@
 </span><span class="lnt">57
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="c">;**
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="c">;**
 </span><span class="c">; Lcall:通用调用函数，宏。最底层函数，使用 X/A/Loop/Ex。
 </span><span class="c">; 此例为使用Motorola汇编。十分重要的地方。用 Motorola 芯片是因为稳定、小巧、强大（看看手机）。
 </span><span class="c"></span>
@@ -273,31 +273,31 @@
 现在，让我们看看函数调用是什么样子的。参数小于等于 2 个时，使用 X/A 对系统通用寄存器。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">Lcall</span> <span class="no">Iszero</span><span class="p">,</span><span class="c">#Total,#8 ; Total 放入 X；8 放入 A。
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">Lcall</span> <span class="no">Iszero</span><span class="p">,</span><span class="c">#Total,#8 ; Total 放入 X；8 放入 A。
 </span></code></pre></td></tr></table>
 </div>
 </div><p>这样，Iszero 函数也很好写。因为规则总是把第一个参数放入 X，第二个放入 A。第三个放入 Loop。第四个放入 Ex。处理时，次序很整齐，就不会出错了。再看一个。参数大于 2 个时，使用 Xx/Xa 对寄存器。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">Lcall</span> <span class="no">Copy</span><span class="p">,</span><span class="c">#Ic,#Total,#8
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">Lcall</span> <span class="no">Copy</span><span class="p">,</span><span class="c">#Ic,#Total,#8
 </span></code></pre></td></tr></table>
 </div>
 </div><p>在 Lcall 中，首先第一句使用一个宏（XA2add）。则第一个参数放入 Xx，其实也就是 Sour(源地址)。第二个参数放入 Xa，其实也就是 Dest(目的地址)。XA2add 定义如下。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">Xa2Add</span> <span class="no">Macro</span>
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">Xa2Add</span> <span class="no">Macro</span>
 <span class="nf">Stx</span> <span class="no">Xx</span>
 <span class="nf">Sta</span> <span class="no">Xa</span>
 <span class="nf">Endm</span>
@@ -306,7 +306,7 @@
 </div><p>我的所有函数都是遵循这个原则。示例如下。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -326,7 +326,7 @@
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">Lcall</span> <span class="no">I.Read</span><span class="p">,</span><span class="no">Ex</span><span class="p">,</span><span class="c">#Ic,#8
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">Lcall</span> <span class="no">I.Read</span><span class="p">,</span><span class="no">Ex</span><span class="p">,</span><span class="c">#Ic,#8
 </span><span class="c"></span><span class="no">Lcall</span> <span class="no">Iszero</span><span class="p">,</span><span class="c">#Ic,#8
 </span><span class="c"></span><span class="no">Ldx</span> <span class="c">#No_D-Msg
 </span><span class="c"></span><span class="no">Bcc</span> <span class="no">Xgas1</span> <span class="c">; 为全0，转移。
@@ -377,7 +377,7 @@
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.80.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.2">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>

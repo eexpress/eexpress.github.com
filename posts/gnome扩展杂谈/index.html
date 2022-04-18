@@ -8,10 +8,10 @@
         <title>Gnome扩展杂谈 - Eexpss 文档</title><meta name="Description" content=""><meta property="og:title" content="Gnome扩展杂谈" />
 <meta property="og:description" content="gnome-extension 是用JavaScript写的。框架叫GJS，基于mozilla的SpiderMonkey引擎，叫蜘蛛猴/猿。猿猴不分，猿似乎更适合中国土话" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://eexpress.github.io/posts/gnome%E6%89%A9%E5%B1%95%E6%9D%82%E8%B0%88/" />
-<meta property="og:image" content="https://eexpress.github.io/avatar.png"/>
+<meta property="og:url" content="https://eexpress.github.io/posts/gnome%E6%89%A9%E5%B1%95%E6%9D%82%E8%B0%88/" /><meta property="og:image" content="https://eexpress.github.io/avatar.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-03-15T06:34:28+08:00" />
 <meta property="article:modified_time" content="2022-03-15T06:34:28+08:00" />
+
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://eexpress.github.io/avatar.png"/>
 
@@ -119,7 +119,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -130,7 +130,7 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">⭕ cat ../_clang-format
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">⭕ cat ../_clang-format
 BasedOnStyle:  WebKit
 AllowShortBlocksOnASingleLine: Always
 AllowShortIfStatementsOnASingleLine: AllIfsAndElse
@@ -146,10 +146,10 @@ SpacesBeforeTrailingComments: 2
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">⭕ gnome-extensions create --uuid=speed@eexpss.gmail.com --name=&#34;Screen Net Speed&#34; --description=&#34;animation net speed on screen&#34; --template=indicator
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">⭕ gnome-extensions create --uuid=speed@eexpss.gmail.com --name=&#34;Screen Net Speed&#34; --description=&#34;animation net speed on screen&#34; --template=indicator
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -160,11 +160,11 @@ SpacesBeforeTrailingComments: 2
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">env MUTTER_DEBUG_DUMMY_MODE_SPECS=1024x768 \
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">env MUTTER_DEBUG_DUMMY_MODE_SPECS=1024x768 \
 dbus-run-session -- gnome-shell --nested --wayland
 </code></pre></td></tr></table>
 </div>
@@ -173,11 +173,11 @@ dbus-run-session -- gnome-shell --nested --wayland
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">⭕ type glog
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">⭕ type glog
 glog 是“journalctl -f -o cat /usr/bin/gnome-shell”的别名
 </code></pre></td></tr></table>
 </div>
@@ -186,11 +186,11 @@ glog 是“journalctl -f -o cat /usr/bin/gnome-shell”的别名
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">⭕ gnome-extensions pack -f --extra-source=Clock.js
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">⭕ gnome-extensions pack -f --extra-source=Clock.js
 
 </code></pre></td></tr></table>
 </div>
@@ -229,7 +229,7 @@ glog 是“journalctl -f -o cat /usr/bin/gnome-shell”的别名
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.80.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.2">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>
