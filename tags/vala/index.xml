@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>vala - 标签 - Eexpss 文档</title>
+        <link>https://eexpress.github.io/tags/vala/</link>
+        <description>vala - 标签 - Eexpss 文档</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 03 May 2022 16:53:34 &#43;0800</lastBuildDate><atom:link href="https://eexpress.github.io/tags/vala/" rel="self" type="application/rss+xml" /><item>
+    <title>Vala使用外部库</title>
+    <link>https://eexpress.github.io/posts/vala%E4%BD%BF%E7%94%A8%E5%A4%96%E9%83%A8%E5%BA%93/</link>
+    <pubDate>Tue, 03 May 2022 16:53:34 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://eexpress.github.io/posts/vala%E4%BD%BF%E7%94%A8%E5%A4%96%E9%83%A8%E5%BA%93/</guid>
+    <description><![CDATA[准备 使用外部库，需要对应的 vapi 文件。比如：libqrencode.vapi。可以放在源码一起。有两种方法使其有效。 方法1：软链接到系统 vapi 目录。]]></description>
+</item></channel>
+</rss>

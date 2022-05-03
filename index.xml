@@ -3,9 +3,16 @@
         <title>Eexpss 文档</title>
         <link>https://eexpress.github.io/</link>
         <description>Eexpss 文档</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 02 May 2022 14:11:43 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 03 May 2022 16:53:34 &#43;0800</lastBuildDate>
             <atom:link href="https://eexpress.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Vala使用外部库</title>
+    <link>https://eexpress.github.io/posts/vala%E4%BD%BF%E7%94%A8%E5%A4%96%E9%83%A8%E5%BA%93/</link>
+    <pubDate>Tue, 03 May 2022 16:53:34 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://eexpress.github.io/posts/vala%E4%BD%BF%E7%94%A8%E5%A4%96%E9%83%A8%E5%BA%93/</guid>
+    <description><![CDATA[准备 使用外部库，需要对应的 vapi 文件。比如：libqrencode.vapi。可以放在源码一起。有两种方法使其有效。 方法1：软链接到系统 vapi 目录。]]></description>
+</item><item>
     <title>卸载flatpak</title>
     <link>https://eexpress.github.io/posts/%E5%8D%B8%E8%BD%BDflatpak/</link>
     <pubDate>Mon, 02 May 2022 14:11:43 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://eexpress.github.io/posts/perl%E5%86%85%E7%BD%AE%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%97%E8%A1%A8/</guid>
     <description><![CDATA[Perl内置变量的列表 $- 当前页可打印的行数,属于Perl格式系统的一部分 $! 根据上下文内容返回错误号或者错误串 $” 列表分隔符 $# 打印数字时默认的]]></description>
-</item><item>
-    <title>perl命令行参数</title>
-    <link>https://eexpress.github.io/posts/perl%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/</link>
-    <pubDate>Tue, 08 Dec 2009 19:41:09 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://eexpress.github.io/posts/perl%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/</guid>
-    <description><![CDATA[命令行参数 -i[extension] edit &lt;&gt; files in place (makes backup if extension supplied) 和sed一样。直接编辑文件。带扩展名，就产生备份文件，比如-i.bak。 1 2 perl -p -i.bak -e &#39;s/\bfoo\b/bar/g&#39; *.c perl -pie &#39;s/\bfoo\b/bar/g&#39; *.c #不要备份 -n]]></description>
 </item></channel>
 </rss>
