@@ -117,9 +117,9 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">⭕ ip route
-default via 192.168.247.194 dev usb0
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">⭕ ip route
+</span></span><span class="line"><span class="cl">default via 192.168.247.194 dev usb0
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>关闭无线。正常上网，但vpn是不能共享的。</li>
@@ -135,13 +135,13 @@ default via 192.168.247.194 dev usb0
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">⭕ lsusb<span class="p">|</span>g xiaomi
-Bus <span class="m">001</span> Device 006: ID 2717:ff80 Xiaomi Inc. Mi/Redmi series <span class="o">(</span>RNDIS<span class="o">)</span>
-⭕ udevadm info /sys/class/net/usb0 <span class="p">|</span>g ID_VENDOR_ID
-E: <span class="nv">ID_VENDOR_ID</span><span class="o">=</span><span class="m">2717</span>
-⭕ cat /etc/udev/rules.d/90-android-tethering.rules
-<span class="nv">ACTION</span><span class="o">==</span><span class="s2">&#34;add|remove&#34;</span>, <span class="nv">SUBSYSTEM</span><span class="o">==</span><span class="s2">&#34;net&#34;</span>, ATTR<span class="o">{</span>idVendor<span class="o">}==</span><span class="s2">&#34;2717&#34;</span>, ATTR<span class="o">{</span>idProduct<span class="o">}==</span><span class="s2">&#34;ff80&#34;</span>, <span class="nv">SYMLINK</span><span class="o">+=</span><span class="s2">&#34;android&#34;</span>, <span class="nv">RUN</span><span class="o">+=</span><span class="s2">&#34;echo %k &gt;&gt; /home/eexpss/udev&#34;</span>, <span class="nv">RUN</span><span class="o">+=</span><span class="s2">&#34;dhclient %k&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">⭕ lsusb<span class="p">|</span>g xiaomi
+</span></span><span class="line"><span class="cl">Bus <span class="m">001</span> Device 006: ID 2717:ff80 Xiaomi Inc. Mi/Redmi series <span class="o">(</span>RNDIS<span class="o">)</span>
+</span></span><span class="line"><span class="cl">⭕ udevadm info /sys/class/net/usb0 <span class="p">|</span>g ID_VENDOR_ID
+</span></span><span class="line"><span class="cl">E: <span class="nv">ID_VENDOR_ID</span><span class="o">=</span><span class="m">2717</span>
+</span></span><span class="line"><span class="cl">⭕ cat /etc/udev/rules.d/90-android-tethering.rules
+</span></span><span class="line"><span class="cl"><span class="nv">ACTION</span><span class="o">==</span><span class="s2">&#34;add|remove&#34;</span>, <span class="nv">SUBSYSTEM</span><span class="o">==</span><span class="s2">&#34;net&#34;</span>, ATTR<span class="o">{</span>idVendor<span class="o">}==</span><span class="s2">&#34;2717&#34;</span>, ATTR<span class="o">{</span>idProduct<span class="o">}==</span><span class="s2">&#34;ff80&#34;</span>, <span class="nv">SYMLINK</span><span class="o">+=</span><span class="s2">&#34;android&#34;</span>, <span class="nv">RUN</span><span class="o">+=</span><span class="s2">&#34;echo %k &gt;&gt; /home/eexpss/udev&#34;</span>, <span class="nv">RUN</span><span class="o">+=</span><span class="s2">&#34;dhclient %k&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><hr>
 <h2 id="netshare-等软件-wireless">NetShare 等软件 (wireless)</h2>
@@ -160,9 +160,9 @@ E: <span class="nv">ID_VENDOR_ID</span><span class="o">=</span><span class="m">2
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">⭕ ip route
-default via 192.168.151.24 dev wlp3s0 proto dhcp metric <span class="m">20600</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">⭕ ip route
+</span></span><span class="line"><span class="cl">default via 192.168.151.24 dev wlp3s0 proto dhcp metric <span class="m">20600</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><hr>
 <h2 id="同时使用双路由">同时使用双路由</h2>
@@ -178,10 +178,10 @@ default via 192.168.151.24 dev wlp3s0 proto dhcp metric <span class="m">20600</s
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">⭕ ip route
-default via 192.168.130.9 dev usb0
-default via 192.168.8.121 dev wlp3s0 proto dhcp metric <span class="m">20600</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">⭕ ip route
+</span></span><span class="line"><span class="cl">default via 192.168.130.9 dev usb0
+</span></span><span class="line"><span class="cl">default via 192.168.8.121 dev wlp3s0 proto dhcp metric <span class="m">20600</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="临时设置系统代理">临时设置系统代理。</h2>
 <p><code>proxy-setup.bash</code></p>
@@ -213,7 +213,7 @@ default via 192.168.8.121 dev wlp3s0 proto dhcp metric <span class="m">20600</sp
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.2">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.93.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>

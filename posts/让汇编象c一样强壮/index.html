@@ -128,25 +128,25 @@
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="c">;**
-</span><span class="c"></span><span class="nf">Org</span> <span class="no">Ram</span>
-<span class="c">;———————————————————
-</span><span class="c">; Static. &lt;&lt; Public &gt;&gt; 静态
-</span><span class="c"></span><span class="nf">Total</span> <span class="no">Ds</span> <span class="mi">8</span> <span class="c">; 静态:剩余量.
-</span><span class="c"></span><span class="no">Ucode</span> <span class="no">Ds</span> <span class="mi">8</span> <span class="c">; 用户编号。
-</span><span class="c">;———————————————————
-</span><span class="c">; General Register Defined. 通用，十分重要的地方。
-</span><span class="c">; 宏定义8个通用寄存器。十分固定的用于函数调用。决不做其他的用途。
-</span><span class="c"></span><span class="no">Byte</span> <span class="no">Xx</span><span class="p">,</span><span class="no">Xa</span><span class="p">,</span><span class="no">Loop</span><span class="p">,</span><span class="no">Ex</span><span class="p">,</span><span class="no">Tmp0</span><span class="p">,</span><span class="no">Tmp1</span><span class="p">,</span><span class="no">Tmp2</span><span class="p">,</span><span class="no">Tmp3</span>
-<span class="c">; 宏定义，同一个地址取不同的 3 组名字，每次只能使用同一组的名字调用。
-</span><span class="c"></span><span class="nf">Same</span> <span class="no">Xx</span><span class="p">,</span><span class="no">Sour</span><span class="p">,</span><span class="no">Extadd</span> <span class="c">; X 临时保存 / 源地址 / 外部地址
-</span><span class="c"></span><span class="no">Same</span> <span class="no">Xa</span><span class="p">,</span><span class="no">Dest</span><span class="p">,</span><span class="no">Ramadd</span> <span class="c">; A 临时保存 / 目的地址 / 内部地址
-</span><span class="c">;———————————————————
-</span><span class="c">; Temp Data Group. 动态
-</span><span class="c"></span><span class="no">Temp</span> <span class="no">Ds</span> <span class="mi">16</span>
-<span class="nf">Q0</span> <span class="no">Equ</span> <span class="no">Temp</span><span class="err">+</span><span class="mi">8</span>
-<span class="c">;**
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="c">;**
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="nf">Org</span> <span class="no">Ram</span>
+</span></span><span class="line"><span class="cl"><span class="c">;———————————————————
+</span></span></span><span class="line"><span class="cl"><span class="c">; Static. &lt;&lt; Public &gt;&gt; 静态
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="nf">Total</span> <span class="no">Ds</span> <span class="mi">8</span> <span class="c">; 静态:剩余量.
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="no">Ucode</span> <span class="no">Ds</span> <span class="mi">8</span> <span class="c">; 用户编号。
+</span></span></span><span class="line"><span class="cl"><span class="c">;———————————————————
+</span></span></span><span class="line"><span class="cl"><span class="c">; General Register Defined. 通用，十分重要的地方。
+</span></span></span><span class="line"><span class="cl"><span class="c">; 宏定义8个通用寄存器。十分固定的用于函数调用。决不做其他的用途。
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="no">Byte</span> <span class="no">Xx</span><span class="p">,</span><span class="no">Xa</span><span class="p">,</span><span class="no">Loop</span><span class="p">,</span><span class="no">Ex</span><span class="p">,</span><span class="no">Tmp0</span><span class="p">,</span><span class="no">Tmp1</span><span class="p">,</span><span class="no">Tmp2</span><span class="p">,</span><span class="no">Tmp3</span>
+</span></span><span class="line"><span class="cl"><span class="c">; 宏定义，同一个地址取不同的 3 组名字，每次只能使用同一组的名字调用。
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="nf">Same</span> <span class="no">Xx</span><span class="p">,</span><span class="no">Sour</span><span class="p">,</span><span class="no">Extadd</span> <span class="c">; X 临时保存 / 源地址 / 外部地址
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="no">Same</span> <span class="no">Xa</span><span class="p">,</span><span class="no">Dest</span><span class="p">,</span><span class="no">Ramadd</span> <span class="c">; A 临时保存 / 目的地址 / 内部地址
+</span></span></span><span class="line"><span class="cl"><span class="c">;———————————————————
+</span></span></span><span class="line"><span class="cl"><span class="c">; Temp Data Group. 动态
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="no">Temp</span> <span class="no">Ds</span> <span class="mi">16</span>
+</span></span><span class="line"><span class="cl"><span class="nf">Q0</span> <span class="no">Equ</span> <span class="no">Temp</span><span class="err">+</span><span class="mi">8</span>
+</span></span><span class="line"><span class="cl"><span class="c">;**
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>接着，定义函数调用的规则。</p>
 <div class="highlight"><div class="chroma">
@@ -210,64 +210,64 @@
 </span><span class="lnt">57
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="c">;**
-</span><span class="c">; Lcall:通用调用函数，宏。最底层函数，使用 X/A/Loop/Ex。
-</span><span class="c">; 此例为使用Motorola汇编。十分重要的地方。用 Motorola 芯片是因为稳定、小巧、强大（看看手机）。
-</span><span class="c"></span>
-<span class="c">;**
-</span><span class="c"></span><span class="nf">Lcall</span> <span class="no">Macro</span>
-<span class="nf">Ifnc</span> <span class="err">“\</span><span class="mi">5</span><span class="err">”</span><span class="p">,</span><span class="err">””</span> <span class="c">; 有第5个参数。出错。
-</span><span class="c"></span>	<span class="no">Fail</span> <span class="err">“</span><span class="no">Error</span><span class="p">,</span> <span class="no">Parameter</span> <span class="no">too</span> <span class="no">long</span> <span class="no">in</span> <span class="no">LCALL.</span><span class="err">”</span>
-<span class="nf">Endif</span>
-
-<span class="c">; Ifnc “\5”,”” ; 有第5个参数。存入Ex。
-</span><span class="c">; Lda \5 ; 目前尚没有使用过。
-</span><span class="c">; Sta Ex
-</span><span class="c">; Endif
-</span><span class="c">;——————————————————————–
-</span><span class="c"></span><span class="nf">Ifnc</span> <span class="err">“\</span><span class="mi">4</span><span class="err">”</span><span class="p">,</span><span class="err">””</span> <span class="c">; 有第4个参数。存入Loop。
-</span><span class="c"></span>	<span class="no">Ifc</span> <span class="err">“\</span><span class="mi">4</span><span class="err">”</span><span class="p">,</span><span class="err">”</span><span class="no">X</span><span class="err">”</span> <span class="c">; 第4个参数是X。
-</span><span class="c"></span>		<span class="no">Stx</span> <span class="no">Loop</span>
-	<span class="nf">Else</span>
-		<span class="nf">Ifc</span> <span class="err">“\</span><span class="mi">4</span><span class="err">”</span><span class="p">,</span><span class="err">”</span><span class="no">A</span><span class="err">”</span> <span class="c">; 第4个参数是A。
-</span><span class="c"></span>			<span class="no">Sta</span> <span class="no">Loop</span>
-		<span class="nf">Else</span> <span class="c">; 第4个参数不是A。
-</span><span class="c"></span>			<span class="no">Sta</span> <span class="no">Ex</span>
-			<span class="nf">Lda</span> <span class="err">\</span><span class="mi">4</span>
-			<span class="nf">Sta</span> <span class="no">Loop</span>
-			<span class="nf">Lda</span> <span class="no">Ex</span>
-		<span class="nf">Endif</span>
-	<span class="nf">Endif</span>
-<span class="nf">Endif</span>
-<span class="c">;——————————————————————–
-</span><span class="c"></span><span class="nf">Ifnc</span> <span class="err">“\</span><span class="mi">3</span><span class="err">”</span><span class="p">,</span><span class="err">””</span> <span class="c">; 有第3个参数。存入A。
-</span><span class="c"></span>	<span class="no">Ifnc</span> <span class="err">“\</span><span class="mi">3</span><span class="err">”</span><span class="p">,</span><span class="err">”</span><span class="no">A</span><span class="err">”</span> <span class="c">; 第3个参数不是A。
-</span><span class="c"></span>		<span class="no">Ifc</span> <span class="err">“\</span><span class="mi">3</span><span class="err">”</span><span class="p">,</span><span class="err">”</span><span class="no">X</span><span class="err">”</span> <span class="c">; 第3个参数是X。
-</span><span class="c"></span>			<span class="no">Txa</span>
-		<span class="nf">Else</span>
-			<span class="nf">Lda</span> <span class="err">\</span><span class="mi">3</span>
-		<span class="nf">Endif</span>
-	<span class="nf">Endif</span> <span class="c">; 第3个参数是A。不操作。
-</span><span class="c"></span><span class="no">Endif</span>
-<span class="c">;——————————————————————–
-</span><span class="c"></span><span class="nf">Ifnc</span> <span class="err">“\</span><span class="mi">2</span><span class="err">”</span><span class="p">,</span><span class="err">””</span> <span class="c">; 有第2个参数。存入X。
-</span><span class="c"></span>	<span class="no">Ifnc</span> <span class="err">“\</span><span class="mi">2</span><span class="err">”</span><span class="p">,</span><span class="err">”</span><span class="no">X</span><span class="err">”</span> <span class="c">; 第2个参数不是X。
-</span><span class="c"></span>		<span class="no">Ifc</span> <span class="err">“\</span><span class="mi">2</span><span class="err">”</span><span class="p">,</span><span class="err">”</span><span class="no">A</span><span class="err">”</span> <span class="c">; 是A。
-</span><span class="c"></span>			<span class="no">Ifnc</span> <span class="err">“\</span><span class="mi">3</span><span class="err">”</span><span class="p">,</span><span class="err">””</span> <span class="c">; 有第3个参数。
-</span><span class="c"></span>				<span class="no">Fail</span> <span class="err">“</span><span class="no">Error</span><span class="p">,</span> <span class="no">A</span> <span class="no">Cannot</span> <span class="no">Input</span> <span class="no">Here</span> <span class="no">in</span> <span class="no">LCALL.</span><span class="err">”</span>
-			<span class="nf">Else</span> <span class="c">; 是A。但没有第3个参数。
-</span><span class="c"></span>				<span class="no">Tax</span>
-			<span class="nf">Endif</span>
-		<span class="nf">Else</span>
-			<span class="nf">Ldx</span> <span class="err">\</span><span class="mi">2</span>
-		<span class="nf">Endif</span>
-	<span class="nf">Endif</span> <span class="c">; 第2个参数是X。不操作。
-</span><span class="c"></span><span class="no">Endif</span>
-<span class="c">;——————————————————————–
-</span><span class="c"></span><span class="nf">Jsr</span> <span class="err">\</span><span class="mi">1</span> <span class="c">; 调用第1参数函数。
-</span><span class="c"></span><span class="no">Endm</span>
-<span class="c">;**
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="c">;**
+</span></span></span><span class="line"><span class="cl"><span class="c">; Lcall:通用调用函数，宏。最底层函数，使用 X/A/Loop/Ex。
+</span></span></span><span class="line"><span class="cl"><span class="c">; 此例为使用Motorola汇编。十分重要的地方。用 Motorola 芯片是因为稳定、小巧、强大（看看手机）。
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>
+</span></span><span class="line"><span class="cl"><span class="c">;**
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="nf">Lcall</span> <span class="no">Macro</span>
+</span></span><span class="line"><span class="cl"><span class="nf">Ifnc</span> <span class="err">“\</span><span class="mi">5</span><span class="err">”</span><span class="p">,</span><span class="err">””</span> <span class="c">; 有第5个参数。出错。
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>	<span class="no">Fail</span> <span class="err">“</span><span class="no">Error</span><span class="p">,</span> <span class="no">Parameter</span> <span class="no">too</span> <span class="no">long</span> <span class="no">in</span> <span class="no">LCALL.</span><span class="err">”</span>
+</span></span><span class="line"><span class="cl"><span class="nf">Endif</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">; Ifnc “\5”,”” ; 有第5个参数。存入Ex。
+</span></span></span><span class="line"><span class="cl"><span class="c">; Lda \5 ; 目前尚没有使用过。
+</span></span></span><span class="line"><span class="cl"><span class="c">; Sta Ex
+</span></span></span><span class="line"><span class="cl"><span class="c">; Endif
+</span></span></span><span class="line"><span class="cl"><span class="c">;——————————————————————–
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="nf">Ifnc</span> <span class="err">“\</span><span class="mi">4</span><span class="err">”</span><span class="p">,</span><span class="err">””</span> <span class="c">; 有第4个参数。存入Loop。
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>	<span class="no">Ifc</span> <span class="err">“\</span><span class="mi">4</span><span class="err">”</span><span class="p">,</span><span class="err">”</span><span class="no">X</span><span class="err">”</span> <span class="c">; 第4个参数是X。
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>		<span class="no">Stx</span> <span class="no">Loop</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">Else</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">Ifc</span> <span class="err">“\</span><span class="mi">4</span><span class="err">”</span><span class="p">,</span><span class="err">”</span><span class="no">A</span><span class="err">”</span> <span class="c">; 第4个参数是A。
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>			<span class="no">Sta</span> <span class="no">Loop</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">Else</span> <span class="c">; 第4个参数不是A。
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>			<span class="no">Sta</span> <span class="no">Ex</span>
+</span></span><span class="line"><span class="cl">			<span class="nf">Lda</span> <span class="err">\</span><span class="mi">4</span>
+</span></span><span class="line"><span class="cl">			<span class="nf">Sta</span> <span class="no">Loop</span>
+</span></span><span class="line"><span class="cl">			<span class="nf">Lda</span> <span class="no">Ex</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">Endif</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">Endif</span>
+</span></span><span class="line"><span class="cl"><span class="nf">Endif</span>
+</span></span><span class="line"><span class="cl"><span class="c">;——————————————————————–
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="nf">Ifnc</span> <span class="err">“\</span><span class="mi">3</span><span class="err">”</span><span class="p">,</span><span class="err">””</span> <span class="c">; 有第3个参数。存入A。
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>	<span class="no">Ifnc</span> <span class="err">“\</span><span class="mi">3</span><span class="err">”</span><span class="p">,</span><span class="err">”</span><span class="no">A</span><span class="err">”</span> <span class="c">; 第3个参数不是A。
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>		<span class="no">Ifc</span> <span class="err">“\</span><span class="mi">3</span><span class="err">”</span><span class="p">,</span><span class="err">”</span><span class="no">X</span><span class="err">”</span> <span class="c">; 第3个参数是X。
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>			<span class="no">Txa</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">Else</span>
+</span></span><span class="line"><span class="cl">			<span class="nf">Lda</span> <span class="err">\</span><span class="mi">3</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">Endif</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">Endif</span> <span class="c">; 第3个参数是A。不操作。
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="no">Endif</span>
+</span></span><span class="line"><span class="cl"><span class="c">;——————————————————————–
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="nf">Ifnc</span> <span class="err">“\</span><span class="mi">2</span><span class="err">”</span><span class="p">,</span><span class="err">””</span> <span class="c">; 有第2个参数。存入X。
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>	<span class="no">Ifnc</span> <span class="err">“\</span><span class="mi">2</span><span class="err">”</span><span class="p">,</span><span class="err">”</span><span class="no">X</span><span class="err">”</span> <span class="c">; 第2个参数不是X。
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>		<span class="no">Ifc</span> <span class="err">“\</span><span class="mi">2</span><span class="err">”</span><span class="p">,</span><span class="err">”</span><span class="no">A</span><span class="err">”</span> <span class="c">; 是A。
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>			<span class="no">Ifnc</span> <span class="err">“\</span><span class="mi">3</span><span class="err">”</span><span class="p">,</span><span class="err">””</span> <span class="c">; 有第3个参数。
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>				<span class="no">Fail</span> <span class="err">“</span><span class="no">Error</span><span class="p">,</span> <span class="no">A</span> <span class="no">Cannot</span> <span class="no">Input</span> <span class="no">Here</span> <span class="no">in</span> <span class="no">LCALL.</span><span class="err">”</span>
+</span></span><span class="line"><span class="cl">			<span class="nf">Else</span> <span class="c">; 是A。但没有第3个参数。
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>				<span class="no">Tax</span>
+</span></span><span class="line"><span class="cl">			<span class="nf">Endif</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">Else</span>
+</span></span><span class="line"><span class="cl">			<span class="nf">Ldx</span> <span class="err">\</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">Endif</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">Endif</span> <span class="c">; 第2个参数是X。不操作。
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="no">Endif</span>
+</span></span><span class="line"><span class="cl"><span class="c">;——————————————————————–
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="nf">Jsr</span> <span class="err">\</span><span class="mi">1</span> <span class="c">; 调用第1参数函数。
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="no">Endm</span>
+</span></span><span class="line"><span class="cl"><span class="c">;**
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>使用规则调用函数。
 现在，让我们看看函数调用是什么样子的。参数小于等于 2 个时，使用 X/A 对系统通用寄存器。</p>
@@ -276,8 +276,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">Lcall</span> <span class="no">Iszero</span><span class="p">,</span><span class="c">#Total,#8 ; Total 放入 X；8 放入 A。
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="nf">Lcall</span> <span class="no">Iszero</span><span class="p">,</span><span class="c">#Total,#8 ; Total 放入 X；8 放入 A。
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>这样，Iszero 函数也很好写。因为规则总是把第一个参数放入 X，第二个放入 A。第三个放入 Loop。第四个放入 Ex。处理时，次序很整齐，就不会出错了。再看一个。参数大于 2 个时，使用 Xx/Xa 对寄存器。</p>
 <div class="highlight"><div class="chroma">
@@ -285,8 +285,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">Lcall</span> <span class="no">Copy</span><span class="p">,</span><span class="c">#Ic,#Total,#8
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="nf">Lcall</span> <span class="no">Copy</span><span class="p">,</span><span class="c">#Ic,#Total,#8
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>在 Lcall 中，首先第一句使用一个宏（XA2add）。则第一个参数放入 Xx，其实也就是 Sour(源地址)。第二个参数放入 Xa，其实也就是 Dest(目的地址)。XA2add 定义如下。</p>
 <div class="highlight"><div class="chroma">
@@ -297,11 +297,11 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">Xa2Add</span> <span class="no">Macro</span>
-<span class="nf">Stx</span> <span class="no">Xx</span>
-<span class="nf">Sta</span> <span class="no">Xa</span>
-<span class="nf">Endm</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="nf">Xa2Add</span> <span class="no">Macro</span>
+</span></span><span class="line"><span class="cl"><span class="nf">Stx</span> <span class="no">Xx</span>
+</span></span><span class="line"><span class="cl"><span class="nf">Sta</span> <span class="no">Xa</span>
+</span></span><span class="line"><span class="cl"><span class="nf">Endm</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>我的所有函数都是遵循这个原则。示例如下。</p>
 <div class="highlight"><div class="chroma">
@@ -326,25 +326,25 @@
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">Lcall</span> <span class="no">I.Read</span><span class="p">,</span><span class="no">Ex</span><span class="p">,</span><span class="c">#Ic,#8
-</span><span class="c"></span><span class="no">Lcall</span> <span class="no">Iszero</span><span class="p">,</span><span class="c">#Ic,#8
-</span><span class="c"></span><span class="no">Ldx</span> <span class="c">#No_D-Msg
-</span><span class="c"></span><span class="no">Bcc</span> <span class="no">Xgas1</span> <span class="c">; 为全0，转移。
-</span><span class="c"></span><span class="no">Lcall</span> <span class="no">Isbcd</span><span class="p">,</span><span class="c">#Ic,#8
-</span><span class="c"></span><span class="no">Ldx</span> <span class="c">#Ic_E-Msg
-</span><span class="c"></span><span class="no">Bcs</span> <span class="no">Xgas</span> <span class="c">; 不是 BCD 码，出错处理。
-</span><span class="c"></span><span class="no">Lcall</span> <span class="no">Clear</span><span class="p">,</span><span class="c">#Temp,#8
-</span><span class="c"></span><span class="no">Lcall</span> <span class="no">I.Write</span><span class="p">,</span><span class="no">Ex</span><span class="p">,</span><span class="c">#Temp,#8 ; 此处大量使用动态单元。
-</span><span class="c"></span><span class="no">Lcall</span> <span class="no">I.Read</span><span class="p">,</span><span class="no">Ex</span><span class="p">,</span><span class="c">#Temp,#8
-</span><span class="c"></span><span class="no">Lcall</span> <span class="no">I.Read</span><span class="p">,</span><span class="no">Ex</span><span class="p">,</span><span class="c">#Temp,#8
-</span><span class="c"></span>
-<span class="nf">Ldx</span> <span class="c">#No_C-Msg
-</span><span class="c"></span><span class="no">Bih</span> <span class="no">Xgas</span>
-<span class="nf">Lcall</span> <span class="no">Iszero</span><span class="p">,</span><span class="c">#Temp,#8
-</span><span class="c"></span>
-<span class="nf">Ldx</span> <span class="c">#Ez_E-Msg
-</span><span class="c"></span><span class="no">Bcs</span> <span class="no">Xgas</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="nf">Lcall</span> <span class="no">I.Read</span><span class="p">,</span><span class="no">Ex</span><span class="p">,</span><span class="c">#Ic,#8
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="no">Lcall</span> <span class="no">Iszero</span><span class="p">,</span><span class="c">#Ic,#8
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="no">Ldx</span> <span class="c">#No_D-Msg
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="no">Bcc</span> <span class="no">Xgas1</span> <span class="c">; 为全0，转移。
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="no">Lcall</span> <span class="no">Isbcd</span><span class="p">,</span><span class="c">#Ic,#8
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="no">Ldx</span> <span class="c">#Ic_E-Msg
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="no">Bcs</span> <span class="no">Xgas</span> <span class="c">; 不是 BCD 码，出错处理。
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="no">Lcall</span> <span class="no">Clear</span><span class="p">,</span><span class="c">#Temp,#8
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="no">Lcall</span> <span class="no">I.Write</span><span class="p">,</span><span class="no">Ex</span><span class="p">,</span><span class="c">#Temp,#8 ; 此处大量使用动态单元。
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="no">Lcall</span> <span class="no">I.Read</span><span class="p">,</span><span class="no">Ex</span><span class="p">,</span><span class="c">#Temp,#8
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="no">Lcall</span> <span class="no">I.Read</span><span class="p">,</span><span class="no">Ex</span><span class="p">,</span><span class="c">#Temp,#8
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>
+</span></span><span class="line"><span class="cl"><span class="nf">Ldx</span> <span class="c">#No_C-Msg
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="no">Bih</span> <span class="no">Xgas</span>
+</span></span><span class="line"><span class="cl"><span class="nf">Lcall</span> <span class="no">Iszero</span><span class="p">,</span><span class="c">#Temp,#8
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>
+</span></span><span class="line"><span class="cl"><span class="nf">Ldx</span> <span class="c">#Ez_E-Msg
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="no">Bcs</span> <span class="no">Xgas</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>大家看了，应该还可以吧。起码比较好看。容易看懂。不大会出错了。特别的是，从此，你的子函数可以做成标准的库了 ！！！！！</p>
 <p>当然，有钱的话，可以买 C 编译器。不过，一半的编译器有很多调用的限制，如 C68 只能传递 2 个参数，多余的参数需要自己先放在固定的单元，还是需要自己去记参数的位置。</p>
@@ -377,7 +377,7 @@
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.2">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.93.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>

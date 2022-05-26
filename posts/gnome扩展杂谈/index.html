@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/eexpress.github.io\/posts\/gnome%E6%89%A9%E5%B1%95%E6%9D%82%E8%B0%88\/"
-        },"genre": "posts","keywords": "gnome, extension, gjs","wordcount":  1751 ,
+        },"genre": "posts","keywords": "gnome, extension, gjs","wordcount":  1750 ,
         "url": "https:\/\/eexpress.github.io\/posts\/gnome%E6%89%A9%E5%B1%95%E6%9D%82%E8%B0%88\/","datePublished": "2022-03-15T06:34:28+08:00","dateModified": "2022-03-15T06:34:28+08:00","publisher": {
             "@type": "Organization",
             "name": "作者"},"author": {
@@ -79,7 +79,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Gnome扩展杂谈</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-15">2022-03-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1751 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-15">2022-03-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1750 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -130,16 +130,16 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">⭕ cat ../_clang-format
-BasedOnStyle:  WebKit
-AllowShortBlocksOnASingleLine: Always
-AllowShortIfStatementsOnASingleLine: AllIfsAndElse
-BreakBeforeBraces: Attach
-TabWidth:        4
-UseTab:          Always
-AlignConsecutiveAssignments: true
-SpacesBeforeTrailingComments: 2
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">⭕ cat ../_clang-format
+</span></span><span class="line"><span class="cl">BasedOnStyle:  WebKit
+</span></span><span class="line"><span class="cl">AllowShortBlocksOnASingleLine: Always
+</span></span><span class="line"><span class="cl">AllowShortIfStatementsOnASingleLine: AllIfsAndElse
+</span></span><span class="line"><span class="cl">BreakBeforeBraces: Attach
+</span></span><span class="line"><span class="cl">TabWidth:        4
+</span></span><span class="line"><span class="cl">UseTab:          Always
+</span></span><span class="line"><span class="cl">AlignConsecutiveAssignments: true
+</span></span><span class="line"><span class="cl">SpacesBeforeTrailingComments: 2
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>现在开发简单，新建扩展如下。<code>--template</code>是可以补全的。</li>
@@ -149,8 +149,8 @@ SpacesBeforeTrailingComments: 2
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">⭕ gnome-extensions create --uuid=speed@eexpss.gmail.com --name=&#34;Screen Net Speed&#34; --description=&#34;animation net speed on screen&#34; --template=indicator
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">⭕ gnome-extensions create --uuid=speed@eexpss.gmail.com --name=&#34;Screen Net Speed&#34; --description=&#34;animation net speed on screen&#34; --template=indicator
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>根据模板，只是在<code>~/.local/share/gnome-shell/extensions/</code>产生2个或者3个固定的文件。<code>extension.js</code>，<code>metadata.json</code>，<code>stylesheet.css</code>(可选)。</li>
@@ -164,9 +164,9 @@ SpacesBeforeTrailingComments: 2
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">env MUTTER_DEBUG_DUMMY_MODE_SPECS=1024x768 \
-dbus-run-session -- gnome-shell --nested --wayland
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">env MUTTER_DEBUG_DUMMY_MODE_SPECS=1024x768 \
+</span></span><span class="line"><span class="cl">dbus-run-session -- gnome-shell --nested --wayland
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>调试使用如下命令，查看错误。可以使用各种<code>*Lint</code>提前检查语法等基本错误，反正对比过后，我懒得折腾。</li>
@@ -177,9 +177,9 @@ dbus-run-session -- gnome-shell --nested --wayland
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">⭕ type glog
-glog 是“journalctl -f -o cat /usr/bin/gnome-shell”的别名
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">⭕ type glog
+</span></span><span class="line"><span class="cl">glog 是“journalctl -f -o cat /usr/bin/gnome-shell”的别名
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>打包使用如下命令，<code>--ex</code>可补全，是需要附加的资源文件。打包是<code>@uuid@.shell-extension.zip</code>这样的压缩包。后期虽然可以<code>zip -u</code>更新，但<code>gnome-extensions</code>支持自动编译<code>gschema</code>设置和<code>po</code>翻译等各种资源文件，省略手动过程。</li>
@@ -187,12 +187,10 @@ glog 是“journalctl -f -o cat /usr/bin/gnome-shell”的别名
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">⭕ gnome-extensions pack -f --extra-source=Clock.js
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">⭕ gnome-extensions pack -f --extra-source=Clock.js
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>发布在<code>https://extensions.gnome.org</code>的<code>Add yours</code>。然后等待审查。遇到过两三次，我提交后，网页才刷新，就显示通过了的，怀疑审查者的手抖了一下。</li>
@@ -229,7 +227,7 @@ glog 是“journalctl -f -o cat /usr/bin/gnome-shell”的别名
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.2">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.93.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>

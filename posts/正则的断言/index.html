@@ -130,7 +130,7 @@
 </blockquote>
 <ul>
 <li>&ldquo;(?&lt;=pattern)&rdquo; &lt;- &ldquo;\K&rdquo; &lt;- &ldquo;(*positive_lookbehind:pattern)&rdquo;</li>
-<li>例子：&quot;/(?&lt;=\t)\w+/&quot;，匹配前面是<code>tab</code>的单词。5.30后实验性支持可变长度(1-255)的向后断言。</li>
+<li>例子：&rdquo;/(?&lt;=\t)\w+/&quot;，匹配前面是<code>tab</code>的单词。5.30后实验性支持可变长度(1-255)的向后断言。</li>
 <li><code>\K</code>写法，不支持可变长度。其实<code>\K</code>只是匹配中，暂存各种匹配结果的地方，当然不进入<code>$&amp;</code>。</li>
 <li><code>\K</code>虽然可用于其他断言，但行为不确定。</li>
 <li><code>\K</code>比断言更有效。尤其在需要删除匹配后面的内容时。比如<code>s/(foo)bar/$1/g</code>可写成<code>s/foo\Kbar//g</code>，把<code>bar</code>删除，保留<code>foo</code>。</li>
@@ -167,7 +167,7 @@
 <h3 id="内嵌修饰词">内嵌修饰词</h3>
 <ul>
 <li>&ldquo;(?adlupimnsx-imnsx)&rdquo; &ldquo;(?^alupimnsx)&rdquo;</li>
-<li>例子：&quot;(?i)foobar&rdquo;，判断这条时，使用/i模式。</li>
+<li>例子：&quot;(?i)foobar&quot;，判断这条时，使用/i模式。</li>
 <li>例子：<code>/((?im)foo(?-m)bar)/</code>，全句/i模式，但<code>bar</code>取消/m模式。</li>
 </ul>
 <h3 id="纯判断模式">纯判断模式</h3>
@@ -201,9 +201,9 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">const re = new RegExp(&#39;\\b&#39;+s+&#39;\\b&#39;);
-const r = str.match(re);
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">const re = new RegExp(&#39;\\b&#39;+s+&#39;\\b&#39;);
+</span></span><span class="line"><span class="cl">const r = str.match(re);
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="词边界">词边界</h3>
 <div class="highlight"><div class="chroma">
@@ -214,11 +214,11 @@ const r = str.match(re);
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">\b{}   Match at Unicode boundary of specified type
-\B{}   Match where corresponding \b{} doesn&#39;t match
-\b     Match a \w\W or \W\w boundary
-\B     Match except at a \w\W or \W\w boundary
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">\b{}   Match at Unicode boundary of specified type
+</span></span><span class="line"><span class="cl">\B{}   Match where corresponding \b{} doesn&#39;t match
+</span></span><span class="line"><span class="cl">\b     Match a \w\W or \W\w boundary
+</span></span><span class="line"><span class="cl">\B     Match except at a \w\W or \W\w boundary
+</span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p>之前哪里看的<code>\&lt;</code>和<code>\&gt;</code>，咋找不到了。</p>
@@ -251,7 +251,7 @@ const r = str.match(re);
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.2">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.93.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>

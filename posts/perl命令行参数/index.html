@@ -100,9 +100,9 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="n">perl</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">i</span><span class="o">.</span><span class="n">bak</span> <span class="o">-</span><span class="n">e</span> <span class="s">&#39;s/\bfoo\b/bar/g&#39;</span> <span class="o">*.</span><span class="n">c</span>
-<span class="n">perl</span> <span class="o">-</span><span class="n">pie</span> <span class="s">&#39;s/\bfoo\b/bar/g&#39;</span> <span class="o">*.</span><span class="n">c</span> <span class="c1">#不要备份</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-perl" data-lang="perl"><span class="line"><span class="cl"><span class="n">perl</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">i</span><span class="o">.</span><span class="n">bak</span> <span class="o">-</span><span class="n">e</span> <span class="s">&#39;s/\bfoo\b/bar/g&#39;</span> <span class="o">*.</span><span class="n">c</span>
+</span></span><span class="line"><span class="cl"><span class="n">perl</span> <span class="o">-</span><span class="n">pie</span> <span class="s">&#39;s/\bfoo\b/bar/g&#39;</span> <span class="o">*.</span><span class="n">c</span> <span class="c1">#不要备份</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p><code>-n</code>                assume &ldquo;while (&lt;&gt;) { &hellip; }&rdquo; loop around program</p>
@@ -119,9 +119,9 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">perl -F: -lane <span class="s1">&#39;print &#34;@F[0..4] $F[6]\n&#34;&#39;</span> /etc/passwd
-perl -lane <span class="s1">&#39;print $F[4] + $F[-2]&#39;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">perl -F: -lane <span class="s1">&#39;print &#34;@F[0..4] $F[6]\n&#34;&#39;</span> /etc/passwd
+</span></span><span class="line"><span class="cl">perl -lane <span class="s1">&#39;print $F[4] + $F[-2]&#39;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p>类似awk。</p>
@@ -144,9 +144,9 @@ perl -lane <span class="s1">&#39;print $F[4] + $F[-2]&#39;</span>
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">perl -ne <span class="s1">&#39;print if /^START$/ .. /^END$/&#39;</span> file
-perl -ne <span class="s1">&#39;print unless /^START$/ .. /^END$/&#39;</span> file 	<span class="c1">#不显示start和end之间的行</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">perl -ne <span class="s1">&#39;print if /^START$/ .. /^END$/&#39;</span> file
+</span></span><span class="line"><span class="cl">perl -ne <span class="s1">&#39;print unless /^START$/ .. /^END$/&#39;</span> file 	<span class="c1">#不显示start和end之间的行</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p><code>-00</code> 段落模式，即以连续换行为分隔符</p>
@@ -198,7 +198,7 @@ perl -ne <span class="s1">&#39;print unless /^START$/ .. /^END$/&#39;</span> fil
 </tbody>
 </table>
 <hr>
-<p>%s/['']/'/g
+<p>%s/[&rsquo;&rsquo;]/&rsquo;/g
 %s/[&quot;&quot;]/&quot;/g</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
@@ -228,7 +228,7 @@ perl -ne <span class="s1">&#39;print unless /^START$/ .. /^END$/&#39;</span> fil
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.2">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.93.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>

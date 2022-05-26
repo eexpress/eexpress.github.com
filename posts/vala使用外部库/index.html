@@ -106,9 +106,9 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">⭕ cd  /usr/share/vala-0.56/vapi/
-⭕ ln -sf ~/project/clip-qrcode-share/libqrencode.vapi .
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">⭕ cd  /usr/share/vala-0.56/vapi/
+</span></span><span class="line"><span class="cl">⭕ ln -sf ~/project/clip-qrcode-share/libqrencode.vapi .
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>方法2：meson 设置搜索 vapi 的目录和参数。</li>
@@ -119,9 +119,9 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">vapi_dir = meson.current_source_dir()
-add_project_arguments([&#39;--vapidir&#39;, vapi_dir], language: &#39;vala&#39;)
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vapi_dir = meson.current_source_dir()
+</span></span><span class="line"><span class="cl">add_project_arguments([&#39;--vapidir&#39;, vapi_dir], language: &#39;vala&#39;)
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="使用">使用</h2>
 <blockquote>
@@ -134,10 +134,10 @@ add_project_arguments([&#39;--vapidir&#39;, vapi_dir], language: &#39;vala&#39;)
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"> error: The namespace name `Qrencode&#39; could not be found
-    3 | using Qrencode;	// depend libqrencode-dev
-      |       ^~~~~~~~
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"> error: The namespace name `Qrencode&#39; could not be found
+</span></span><span class="line"><span class="cl">    3 | using Qrencode;	// depend libqrencode-dev
+</span></span><span class="line"><span class="cl">      |       ^~~~~~~~
+</span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p>在 <code>meson.build</code> 的  <code>lib_dependencies</code> 段加上 <code>dependency('libqrencode', version: '&gt;=4.0.0'),</code> 。</p>
@@ -147,8 +147,8 @@ add_project_arguments([&#39;--vapidir&#39;, vapi_dir], language: &#39;vala&#39;)
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">/usr/bin/ld: 找不到 /usr/lib/x86_64-linux-gnu/libqrencode.so: 没有那个文件或目录
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/usr/bin/ld: 找不到 /usr/lib/x86_64-linux-gnu/libqrencode.so: 没有那个文件或目录
+</span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p>这是标准的缺少dev库了。安装 <code>libqrencode-dev</code>。才能正常。</p>
@@ -159,9 +159,9 @@ add_project_arguments([&#39;--vapidir&#39;, vapi_dir], language: &#39;vala&#39;)
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">⭕ pfile /usr/lib/x86_64-linux-gnu/libqrencode.so
-libqrencode-dev:amd64: /usr/lib/x86_64-linux-gnu/libqrencode.so
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">⭕ pfile /usr/lib/x86_64-linux-gnu/libqrencode.so
+</span></span><span class="line"><span class="cl">libqrencode-dev:amd64: /usr/lib/x86_64-linux-gnu/libqrencode.so
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="问题权衡">问题权衡</h2>
 <blockquote>
@@ -179,12 +179,12 @@ libqrencode-dev:amd64: /usr/lib/x86_64-linux-gnu/libqrencode.so
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">⭕ pneed qrencode
-qrencode
-  依赖: libc6
-  依赖: libpng16-16
-  依赖: libqrencode4
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">⭕ pneed qrencode
+</span></span><span class="line"><span class="cl">qrencode
+</span></span><span class="line"><span class="cl">  依赖: libc6
+</span></span><span class="line"><span class="cl">  依赖: libpng16-16
+</span></span><span class="line"><span class="cl">  依赖: libqrencode4
+</span></span></code></pre></td></tr></table>
 </div>
 </div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
@@ -213,7 +213,7 @@ qrencode
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.2">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.93.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>
