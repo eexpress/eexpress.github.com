@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Rpm打包 - Eexpss 文档</title><meta name="Description" content=""><meta property="og:title" content="Rpm打包" />
+<meta property="og:description" content="deb打包，排好目录，写一个control，二进制打包还是容易的。 1 2 3 4 5 6 7 8 9 10 11 12 13 ⭕ tree clip-qrcode-share-0.2/ clip-qrcode-share-0.2/ ├── DEBIAN │ └── control └── usr ├── bin │ └─" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://eexpress.github.io/posts/rpm%E6%89%93%E5%8C%85/" /><meta property="og:image" content="https://eexpress.github.io/avatar.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-27T19:33:57+08:00" />
+<meta property="article:modified_time" content="2022-05-27T19:33:57+08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://eexpress.github.io/avatar.png"/>
+
+<meta name="twitter:title" content="Rpm打包"/>
+<meta name="twitter:description" content="deb打包，排好目录，写一个control，二进制打包还是容易的。 1 2 3 4 5 6 7 8 9 10 11 12 13 ⭕ tree clip-qrcode-share-0.2/ clip-qrcode-share-0.2/ ├── DEBIAN │ └── control └── usr ├── bin │ └─"/>
+<meta name="application-name" content="Eexpss 文档">
+<meta name="apple-mobile-web-app-title" content="Eexpss 文档"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://eexpress.github.io/posts/rpm%E6%89%93%E5%8C%85/" /><link rel="prev" href="https://eexpress.github.io/posts/vala%E4%BD%BF%E7%94%A8%E5%A4%96%E9%83%A8%E5%BA%93/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Rpm打包",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/eexpress.github.io\/posts\/rpm%E6%89%93%E5%8C%85\/"
+        },"genre": "posts","keywords": "rpm, deb","wordcount":  795 ,
+        "url": "https:\/\/eexpress.github.io\/posts\/rpm%E6%89%93%E5%8C%85\/","datePublished": "2022-05-27T19:33:57+08:00","dateModified": "2022-05-27T19:33:57+08:00","publisher": {
+            "@type": "Organization",
+            "name": "作者"},"author": {
+                "@type": "Person",
+                "name": "作者"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Eexpss 文档">Eexpss 文档</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Eexpss 文档">Eexpss 文档</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Rpm打包</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-05-27">2022-05-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 795 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#步骤">步骤</a></li>
+    <li><a href="#常见的宏">常见的宏</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><blockquote>
+<p>deb打包，排好目录，写一个control，二进制打包还是容易的。</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">⭕ tree clip-qrcode-share-0.2/
+</span></span><span class="line"><span class="cl">clip-qrcode-share-0.2/
+</span></span><span class="line"><span class="cl">├── DEBIAN
+</span></span><span class="line"><span class="cl">│   └── control
+</span></span><span class="line"><span class="cl">└── usr
+</span></span><span class="line"><span class="cl">    ├── bin
+</span></span><span class="line"><span class="cl">    │   └── clip-qrcode-share
+</span></span><span class="line"><span class="cl">    └── share
+</span></span><span class="line"><span class="cl">        ├── applications
+</span></span><span class="line"><span class="cl">        │   └── clip-qrcode-share.desktop
+</span></span><span class="line"><span class="cl">        └── pixmaps
+</span></span><span class="line"><span class="cl">            └── clip-qrcode-share.png
+</span></span><span class="line"><span class="cl">⭕ dpkg -b clip-qrcode-share-0.2/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>rpm打包，复杂得多，以前折腾过，现在用f36，又要搞这个。redhat的例子太简单，各种不对头。想找一个和deb统一点的偷懒方式。</p>
+</blockquote>
+<h2 id="步骤">步骤</h2>
+<ul>
+<li>安装 rpmdevtools rpmlint</li>
+<li><code>rpmdev-setuptree</code> 建立目录模板</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">⭕ rpmdev-setuptree
+</span></span><span class="line"><span class="cl">⭕ tree ~/rpmbuild/
+</span></span><span class="line"><span class="cl">├── BUILD
+</span></span><span class="line"><span class="cl">├── RPMS
+</span></span><span class="line"><span class="cl">├── SOURCES
+</span></span><span class="line"><span class="cl">├── SPECS
+</span></span><span class="line"><span class="cl">└── SRPMS
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>从deb目录，复制带结构的文件过去，并编写偷懒的spec。fedora的源里面没有droopy，只好放一个源码在bin目录。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">⭕ pwd
+</span></span><span class="line"><span class="cl">/home/eexpss/project/clip-qrcode-share
+</span></span><span class="line"><span class="cl">⭕ cp -r clip-qrcode-share-0.2/usr ~/rpmbuild/SOURCES/
+</span></span><span class="line"><span class="cl">⭕ cd ~/rpmbuild/SPECS/
+</span></span><span class="line"><span class="cl">⭕ rpmdev-newspec clip-qrcode-share
+</span></span><span class="line"><span class="cl">clip-qrcode-share.spec created; type minimal, rpm version &gt;= 4.17.
+</span></span><span class="line"><span class="cl">⭕ e clip-qrcode-share.spec
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>spec大致如下，%install部分纯偷懒的写法。其他的%make之类的，都删除，要不各种出错。依赖关系中，版本号不知道如何写，写了安装不了。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Name:           clip-qrcode-share
+</span></span><span class="line"><span class="cl">Version:        0.2
+</span></span><span class="line"><span class="cl">Release:        1%{?dist}
+</span></span><span class="line"><span class="cl">Summary:        Sharing clipboard and files to mobile by scan QRCode.
+</span></span><span class="line"><span class="cl">BuildArch:      noarch
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">License:        GPL V3
+</span></span><span class="line"><span class="cl">URL:            https://github.com/eexpress/clip-qrcode-share
+</span></span><span class="line"><span class="cl">Source0:        %{name}-%{version}.tar.xz
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Requires:       libadwaita gtk4 cairo qrencode
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">%description
+</span></span><span class="line"><span class="cl">Sharing clipboard and files to mobile by scan QRCode.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">%define _binaries_in_noarch_packages_terminate_build   0
+</span></span><span class="line"><span class="cl">#error: Arch dependent binaries in noarch package
+</span></span><span class="line"><span class="cl">#错误：noarch 软件包中有架构相关的二进制文件
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">%install
+</span></span><span class="line"><span class="cl">cd %{_sourcedir}
+</span></span><span class="line"><span class="cl">cp -ar * %{buildroot}/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">%files
+</span></span><span class="line"><span class="cl">%{_bindir}/%{name}
+</span></span><span class="line"><span class="cl">%{_bindir}/droopy
+</span></span><span class="line"><span class="cl">%{_datadir}/applications/%{name}.desktop
+</span></span><span class="line"><span class="cl">%{_datadir}/pixmaps/%{name}.png
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">%changelog
+</span></span><span class="line"><span class="cl">* Thu May 26 2022 eexpss &lt;eexpss@gmail.com&gt;
+</span></span><span class="line"><span class="cl">-
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>打包。默认的打包目录，居然在家目录的固定目录，差劲的设计。虽然<code>~/.rpmmacros</code>可修改，只是谁会一台机器一次只维护一个包？所以，用过赶紧移走。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">⭕ rpmbuild -bb clip-qrcode-share.spec
+</span></span><span class="line"><span class="cl">⭕ tree ~/rpmbuild/
+</span></span><span class="line"><span class="cl">/home/eexpss/rpmbuild/
+</span></span><span class="line"><span class="cl">├── BUILD
+</span></span><span class="line"><span class="cl">├── BUILDROOT
+</span></span><span class="line"><span class="cl">├── RPMS
+</span></span><span class="line"><span class="cl">│   └── noarch
+</span></span><span class="line"><span class="cl">│       └── clip-qrcode-share-0.2-1.fc36.noarch.rpm
+</span></span><span class="line"><span class="cl">├── SOURCES
+</span></span><span class="line"><span class="cl">│   └── usr
+</span></span><span class="line"><span class="cl">│       ├── bin
+</span></span><span class="line"><span class="cl">│       │   ├── clip-qrcode-share
+</span></span><span class="line"><span class="cl">│       │   └── droopy
+</span></span><span class="line"><span class="cl">│       └── share
+</span></span><span class="line"><span class="cl">│           ├── applications
+</span></span><span class="line"><span class="cl">│           │   └── clip-qrcode-share.desktop
+</span></span><span class="line"><span class="cl">│           └── pixmaps
+</span></span><span class="line"><span class="cl">│               └── clip-qrcode-share.png
+</span></span><span class="line"><span class="cl">├── SPECS
+</span></span><span class="line"><span class="cl">│   └── clip-qrcode-share.spec
+</span></span><span class="line"><span class="cl">└── SRPMS
+</span></span><span class="line"><span class="cl">⭕ mv ~/rpmbuild/ ~/project/clip-qrcode-share/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="常见的宏">常见的宏</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">%{_sysconfdir}        /etc
+</span></span><span class="line"><span class="cl">%{_prefix}            /usr
+</span></span><span class="line"><span class="cl">%{_exec_prefix}       %{_prefix}
+</span></span><span class="line"><span class="cl">%{_bindir}            %{_exec_prefix}/bin
+</span></span><span class="line"><span class="cl">%{_lib}               lib (lib64 on 64bit systems)
+</span></span><span class="line"><span class="cl">%{_libdir}            %{_exec_prefix}/%{_lib}
+</span></span><span class="line"><span class="cl">%{_libexecdir}        %{_exec_prefix}/libexec
+</span></span><span class="line"><span class="cl">%{_sbindir}           %{_exec_prefix}/sbin
+</span></span><span class="line"><span class="cl">%{_sharedstatedir}    /var/lib
+</span></span><span class="line"><span class="cl">%{_datadir}           %{_prefix}/share
+</span></span><span class="line"><span class="cl">%{_includedir}        %{_prefix}/include
+</span></span><span class="line"><span class="cl">%{_oldincludedir}     /usr/include
+</span></span><span class="line"><span class="cl">%{_infodir}           /usr/share/info
+</span></span><span class="line"><span class="cl">%{_mandir}            /usr/share/man
+</span></span><span class="line"><span class="cl">%{_localstatedir}     /var
+</span></span><span class="line"><span class="cl">%{_initddir}          %{_sysconfdir}/rc.d/init.d
+</span></span><span class="line"><span class="cl">%{_topdir}            %{getenv:HOME}/rpmbuild
+</span></span><span class="line"><span class="cl">%{_builddir}          %{_topdir}/BUILD
+</span></span><span class="line"><span class="cl">%{_rpmdir}            %{_topdir}/RPMS
+</span></span><span class="line"><span class="cl">%{_sourcedir}         %{_topdir}/SOURCES
+</span></span><span class="line"><span class="cl">%{_specdir}           %{_topdir}/SPECS
+</span></span><span class="line"><span class="cl">%{_srcrpmdir}         %{_topdir}/SRPMS
+</span></span><span class="line"><span class="cl">%{_buildrootdir}      %{_topdir}/BUILDROOT
+</span></span><span class="line"><span class="cl">%{_var}               /var
+</span></span><span class="line"><span class="cl">%{_tmppath}           %{_var}/tmp
+</span></span><span class="line"><span class="cl">%{_usr}               /usr
+</span></span><span class="line"><span class="cl">%{_usrsrc}            %{_usr}/src
+</span></span><span class="line"><span class="cl">%{_docdir}            %{_datadir}/doc
+</span></span><span class="line"><span class="cl">%{buildroot}          %{_buildrootdir}/%{name}-%{version}-%{release}.%{_arch}
+</span></span><span class="line"><span class="cl">$RPM_BUILD_ROOT       %{buildroot}
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-05-27</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/rpm/">rpm</a>,&nbsp;<a href="/tags/deb/">deb</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/vala%E4%BD%BF%E7%94%A8%E5%A4%96%E9%83%A8%E5%BA%93/" class="prev" rel="prev" title="Vala使用外部库"><i class="fas fa-angle-left fa-fw"></i>Vala使用外部库</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.93.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

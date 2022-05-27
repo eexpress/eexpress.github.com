@@ -3,9 +3,16 @@
         <title>Eexpss 文档</title>
         <link>https://eexpress.github.io/</link>
         <description>Eexpss 文档</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 03 May 2022 16:53:34 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 27 May 2022 19:33:57 &#43;0800</lastBuildDate>
             <atom:link href="https://eexpress.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Rpm打包</title>
+    <link>https://eexpress.github.io/posts/rpm%E6%89%93%E5%8C%85/</link>
+    <pubDate>Fri, 27 May 2022 19:33:57 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://eexpress.github.io/posts/rpm%E6%89%93%E5%8C%85/</guid>
+    <description><![CDATA[deb打包，排好目录，写一个control，二进制打包还是容易的。 1 2 3 4 5 6 7 8 9 10 11 12 13 ⭕ tree clip-qrcode-share-0.2/ clip-qrcode-share-0.2/ ├── DEBIAN │ └── control └── usr ├── bin │ └─]]></description>
+</item><item>
     <title>Vala使用外部库</title>
     <link>https://eexpress.github.io/posts/vala%E4%BD%BF%E7%94%A8%E5%A4%96%E9%83%A8%E5%BA%93/</link>
     <pubDate>Tue, 03 May 2022 16:53:34 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://eexpress.github.io/posts/vim%E5%8A%A8%E6%80%81%E6%89%A7%E8%A1%8C%E7%BC%96%E8%AF%91/</guid>
     <description><![CDATA[最近突然编译需求来了。每一个文件的依赖库都不同，以前vim的编译函数都是扯谈了。干脆写了一个通用的方法的函数。 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15]]></description>
-</item><item>
-    <title>perl内置变量的列表</title>
-    <link>https://eexpress.github.io/posts/perl%E5%86%85%E7%BD%AE%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%97%E8%A1%A8/</link>
-    <pubDate>Tue, 08 Dec 2009 19:41:09 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://eexpress.github.io/posts/perl%E5%86%85%E7%BD%AE%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%97%E8%A1%A8/</guid>
-    <description><![CDATA[Perl内置变量的列表 $- 当前页可打印的行数,属于Perl格式系统的一部分 $! 根据上下文内容返回错误号或者错误串 $” 列表分隔符 $# 打印数字时默认的]]></description>
 </item></channel>
 </rss>
